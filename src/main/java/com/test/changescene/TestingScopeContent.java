@@ -177,8 +177,8 @@ public class TestingScopeContent {
             } else {
                 for (int i = index; i < getMaxItemNumber(); i++) {
                     VBox vbox = tcVboxes.get(i + 1);
-                    HBox hbox = (HBox) vbox.getChildren().get(0);
-                    Label label = (Label) vbox.getChildren().get(1);
+                    HBox hbox = (HBox) vbox.getChildren().get(1);
+                    Label label = (Label) vbox.getChildren().get(0);
                     TextField textField = (TextField) hbox.getChildren().get(0);
                     CheckBox checkBox = (CheckBox) hbox.getChildren().get(1);
                     Button button = (Button) hbox.getChildren().get(2);
