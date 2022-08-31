@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/changeScene.iml" filepath="$PROJECT_DIR$/changeScene.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChangeSceneJiraSupporter.iml" filepath="$PROJECT_DIR$/ChangeSceneJiraSupporter.iml" />
     </modules>
   </component>
 </project>
