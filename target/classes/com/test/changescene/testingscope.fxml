@@ -129,15 +129,15 @@
                                        <children>
                                           <Button mnemonicParsing="false" styleClass="Button" text="Load Template" textFill="#cef2fb" />
                                           <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Save Template" textFill="#cef2fb" />
-                                          <Button layoutX="113.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
+                                          <Button fx:id="btnAddNewHeaderTestingScope" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#addNewHeaderTestingScope" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
                                        </children>
                                        <VBox.margin>
                                           <Insets left="5.0" top="5.0" />
                                        </VBox.margin>
                                     </HBox>
-                                    <ScrollPane prefHeight="650.0" prefWidth="376.0">
+                                    <ScrollPane fx:id="pngScroll" prefHeight="650.0" prefWidth="376.0">
                                       <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="364.0" style="-fx-background-color: #CEF2FB;" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="364.0" />
                                       </content>
                                        <VBox.margin>
                                           <Insets bottom="5.0" top="5.0" />

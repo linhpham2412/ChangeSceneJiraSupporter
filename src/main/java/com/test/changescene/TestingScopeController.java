@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,6 +14,10 @@ import java.util.Objects;
 
 public class TestingScopeController {
     public Button btnTSMBackToDB;
+    public ScrollPane pngScroll;
+    public Button btnAddNewHeaderTestingScope;
+
+    private final TestingScopeContent testingScope = new TestingScopeContent();
 
     public void testingScopeBackToDashBoard(ActionEvent actionEvent) {
         try {
@@ -27,5 +32,11 @@ public class TestingScopeController {
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public void addNewHeaderTestingScope() {
+        //get Vbox -> scroll pane
+        pngScroll = (ScrollPane) this.btnAddNewHeaderTestingScope.getParent().getParent().getChildrenUnmodifiable().get(1);
+        pngScroll.setContent(testingScope.addNewTestingScopeWithData(testingScope.getMaxItemNumber(), "", ""));
     }
 }
