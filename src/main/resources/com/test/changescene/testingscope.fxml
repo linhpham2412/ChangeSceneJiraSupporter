@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.TestingScopeController">
+   <children>
+      <TilePane prefHeight="800.0" prefWidth="1280.0" stylesheets="@changeSceneStyleSheet.css">
+         <children>
+            <Pane prefHeight="800.0" prefWidth="1281.0">
+               <TilePane.margin>
+                  <Insets />
+               </TilePane.margin>
+               <children>
+                  <Pane prefHeight="48.0" prefWidth="1281.0" style="-fx-background-color: #40707A;">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="4.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btnTSMBackToDB" mnemonicParsing="false" onAction="#testingScopeBackToDashBoard" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #5BA2B0;" text="DB" textFill="#cef2fb">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label id="headerLabel" text="Testing Scope Management">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Separator prefWidth="100.0" visible="false" />
+                              <Label id="headerLabel" alignment="CENTER" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="filename.txt">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Separator layoutX="320.0" layoutY="10.0" prefWidth="70.0" visible="false" />
+                              <Label id="headerLabel" alignment="CENTER_RIGHT" layoutX="830.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Pane>
+                  <Pane layoutX="1.0" layoutY="53.0" prefHeight="708.0" prefWidth="1280.0">
+                     <children>
+                        <HBox layoutX="8.0" layoutY="8.0" prefHeight="724.0" prefWidth="1263.0" spacing="3.0">
+                           <children>
+                              <VBox prefHeight="730.0" prefWidth="882.0" style="-fx-border-color: #64767A;">
+                                 <children>
+                                    <HBox prefHeight="39.0" prefWidth="875.0">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="Ctrl -">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Button mnemonicParsing="false" styleClass="Button" text="Given[1]" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="When[2]" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Then[3]" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="And[4]" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Separator orientation="VERTICAL">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Separator>
+                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[B]old" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[I]talic" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="162.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[N]umeric" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="224.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[L]ist" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Separator layoutX="286.0" layoutY="10.0" orientation="VERTICAL">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Separator>
+                                          <Button layoutX="478.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <TextArea prefHeight="700.0" prefWidth="880.0" styleClass="TextArea" wrapText="true" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="695.0" prefWidth="378.0" style="-fx-border-color: #64767A;">
+                                 <children>
+                                    <HBox spacing="23.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="Button" text="Load Template" textFill="#cef2fb" />
+                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Save Template" textFill="#cef2fb" />
+                                          <Button layoutX="113.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <ScrollPane prefHeight="650.0" prefWidth="376.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="364.0" style="-fx-background-color: #CEF2FB;" />
+                                      </content>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ScrollPane>
+                                    <HBox spacing="40.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" styleClass="Button" text="Copy Selected" textFill="#cef2fb" />
+                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Copy All" textFill="#cef2fb" />
+                                          <CheckBox mnemonicParsing="false" text="Copy for IC Jira">
+                                             <HBox.margin>
+                                                <Insets top="3.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font></CheckBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </TilePane>
+   </children>
+</AnchorPane>
