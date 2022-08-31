@@ -41,7 +41,7 @@
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button layoutX="919.0" layoutY="544.0" mnemonicParsing="false" prefHeight="131.0" prefWidth="118.0" style="-fx-background-color: #40707A;" text="Instruction" textFill="#cef2fb">
+                        <Button layoutX="919.0" layoutY="486.0" mnemonicParsing="false" prefHeight="189.0" prefWidth="117.0" style="-fx-background-color: #40707A;" text="Instruction" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font></Button>
