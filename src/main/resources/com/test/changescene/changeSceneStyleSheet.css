@@ -1,0 +1,47 @@
+.root{
+    -fx-font-size: 12px;
+    -fx-font-family: System;
+    -fx-font-weight: regular;
+}
+
+.Button{
+    -fx-background-color: #40707a;
+    -fx-text-fill: #cef2fb;
+    -fx-font-size: 12px;
+    -fx-font-family: System;
+    -fx-font-weight: regular;
+}
+
+.CheckBox{
+    -fx-text-fill: #cef2fb;
+    -fx-font-size: 13px;
+    -fx-font-family: System;
+    -fx-font-weight: regular;
+    -fx-padding: 2.5px;
+    -fx-border-insets: 2.5px;
+    -fx-background-insets: 2.5px;
+}
+
+.TextArea{
+        -fx-font-size: 14px;
+        -fx-font-family: System;
+        -fx-font-weight: regular;
+}
+
+#headerLabel{
+    -fx-font-size: 18px;
+    -fx-font-family: System;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+#darkpanel{
+    -fx-background-color:  #64767a;
+}
+
+#lightpanel{
+    -fx-border-color: #64767a;
+}
