@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.TilePane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.FXT4EyesCommentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.FXT4EyesCommentController">
    <children>
       <TilePane prefHeight="800.0" prefWidth="1280.0" stylesheets="@changeSceneStyleSheet.css">
          <children>
-            <Pane prefHeight="800.0" prefWidth="1281.0">
+            <Pane id="parentPanel" prefHeight="800.0" prefWidth="1281.0">
                <TilePane.margin>
                   <Insets />
                </TilePane.margin>
@@ -30,7 +20,7 @@
                            <children>
                               <Accordion layoutY="-10.0" prefHeight="339.0" prefWidth="1250.0" expandedPane="$tldPaneFXT4eyesFXTInfo">
                                  <panes>
-                                    <TitledPane fx:id="tldPaneFXT4eyesICInfo" text="IC Information">
+                                    <TitledPane id="headerField" fx:id="tldPaneFXT4eyesICInfo" text="IC Information">
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
@@ -43,75 +33,141 @@
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </padding>
                                                                <children>
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Build Information" />
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="50.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="67.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="118.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="135.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
-                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" />
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Build Information" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="50.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="67.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="118.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="135.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
+                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></CheckBox>
                                                                </children>
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="10.0" layoutY="10.0" prefHeight="285.0" prefWidth="200.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Server Name">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Server Name" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
                                                                </children>
                                                                <HBox.margin>
@@ -123,60 +179,93 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="260.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="SDK Name">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="SDK Name" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
                                                                </children>
                                                                <padding>
@@ -185,60 +274,93 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="510.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="SLOT Name">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="SLOT Name" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
                                                                </children>
                                                                <padding>
@@ -247,60 +369,93 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="760.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Internal SLOT">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Internal SLOT" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
                                                                </children>
                                                                <padding>
@@ -309,60 +464,93 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="1010.0" layoutY="10.0" prefHeight="285.0" prefWidth="285.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="URL Information">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="URL Information" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
                                                                   </CheckBox>
                                                                </children>
                                                                <padding>
@@ -377,7 +565,7 @@
                                           </AnchorPane>
                                        </content>
                                     </TitledPane>
-                                    <TitledPane fx:id="tldPaneFXT4eyesFXTInfo" expanded="false" text="FXT Information">
+                                    <TitledPane id="headerField" fx:id="tldPaneFXT4eyesFXTInfo" expanded="false" text="FXT Information">
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
@@ -974,7 +1162,7 @@
                            <children>
                               <VBox id="lightpanel" prefHeight="394.0" prefWidth="942.0" style="-fx-border-color: #64767A;">
                                  <children>
-                                    <Label text="FIT testing behavior:">
+                                    <Label id="headerField" text="FIT testing behavior:">
                                        <padding>
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
@@ -991,7 +1179,7 @@
                                     <Insets left="3.0" />
                                  </HBox.margin>
                                  <children>
-                                    <Label text="Developer Name:">
+                                    <Label id="headerField" text="Developer Name:">
                                        <padding>
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
@@ -1003,7 +1191,7 @@
                                     </TextArea>
                                     <HBox>
                                        <children>
-                                          <CheckBox mnemonicParsing="false" text="with attachment?">
+                                          <CheckBox id="checkBox" mnemonicParsing="false" prefWidth="170.0" text="with attachment?">
                                              <HBox.margin>
                                                 <Insets left="5.0" top="9.0" />
                                              </HBox.margin>
@@ -1012,7 +1200,7 @@
                                              </font>
                                           </CheckBox>
                                           <Separator prefWidth="41.0" visible="false" />
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Copy to Clipboard">
+                                          <Button mnemonicParsing="false" prefWidth="150.0" styleClass="Button" text="Copy to Clipboard">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin></Button>
@@ -1028,7 +1216,7 @@
                      <children>
                         <HBox layoutX="14.0" layoutY="4.0" spacing="10.0">
                            <children>
-                              <Button fx:id="btnFXT4EeyesBackToDB" mnemonicParsing="false" onAction="#handelFXT4EeyesBackToDB" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #5BA2B0;" text="DB" textFill="#cef2fb">
+                              <Button fx:id="btnFXT4EeyesBackToDB" mnemonicParsing="false" onAction="#handelFXT4EeyesBackToDB" prefHeight="40.0" prefWidth="40.0" styleClass="Button" text="DB" textFill="#cef2fb">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
