@@ -4,9 +4,8 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
@@ -217,7 +216,7 @@ public class TestingScopeContent {
         TextField textField = new TextField();
         CheckBox checkBox = new CheckBox();
         Label label = new Label();
-        Button button = new Button();
+        Button removeSectionButton = new Button();
         Pane panel = new Pane();
         String header = fullHeader;
         String content = fullContent;
@@ -257,10 +256,13 @@ public class TestingScopeContent {
         checkBox.setId(checkboxPrefixName + number);
         checkBox.setPrefWidth(20);
         checkBox.setPrefHeight(20);
-        checkBox.setScaleX(1.9);
-        checkBox.setScaleY(1.9);
-        checkBox.setScaleZ(1.9);
-        checkBox.setStyle("CheckBox");
+        checkBox.setScaleX(1.1);
+        checkBox.setScaleY(1.1);
+        checkBox.setTranslateX(-3);
+        checkBox.setTranslateY(-3);
+        checkBox.setStyle("-fx-border-color: linear-gradient(to bottom right, #50A2E6, #494DF2)");
+        checkBox.setStyle("-fx-background-color: linear-gradient(to bottom right, #49F2E4, #50A2E6)");
+        checkBox.getStyleClass().add("CheckBox");
         checkBox.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
             String fieldName = e.getTarget().toString();
             int index = Integer.parseInt(fieldName.substring(fieldName.indexOf("id=") + checkboxPrefixName.length() + 3, fieldName.indexOf(",")));
@@ -300,13 +302,13 @@ public class TestingScopeContent {
             tf.setText(getShortHeaderById(number));
         });
 
-        button.setId(buttonPrefixName + number);
-        button.setStyle("-fx-background-color: #E14463");
-        button.setPrefHeight(15);
-        button.setMinHeight(15);
-        button.setMaxHeight(15);
-        button.setPrefWidth(25);
-        button.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
+        removeSectionButton.setId(buttonPrefixName + number);
+        removeSectionButton.setStyle("-fx-background-color: #E14463");
+        removeSectionButton.setPrefHeight(15);
+        removeSectionButton.setMinHeight(15);
+        removeSectionButton.setMaxHeight(15);
+        removeSectionButton.setPrefWidth(25);
+        removeSectionButton.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
             try {
                 String fieldName = e.getTarget().toString();
                 int index = Integer.parseInt(fieldName.substring(fieldName.indexOf("id=") + buttonPrefixName.length() + 3, fieldName.indexOf(",")));
@@ -315,7 +317,7 @@ public class TestingScopeContent {
             } catch (Exception ignored) {
             }
         });
-        button.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
+        removeSectionButton.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
             try {
                 Button bt = (Button) e.getSource();
                 CheckBox cb = (CheckBox) bt.getParent().getChildrenUnmodifiable().get(1);
@@ -326,7 +328,7 @@ public class TestingScopeContent {
             } catch (Exception ignored) {
             }
         });
-        button.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
+        removeSectionButton.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
             try {
                 String fieldName = e.getTarget().toString();
                 int index = Integer.parseInt(fieldName.substring(fieldName.indexOf("id=") + buttonPrefixName.length() + 3, fieldName.indexOf(",")));
@@ -357,8 +359,8 @@ public class TestingScopeContent {
         hbox.getChildren().add(textField);
         hbox.getChildren().add(checkBox);
         HBox.setMargin(checkBox, new Insets(5, 5, 5, 15));
-        hbox.getChildren().add(button);
-        HBox.setMargin(button, new Insets(7, 5, 5, 5));
+        hbox.getChildren().add(removeSectionButton);
+        HBox.setMargin(removeSectionButton, new Insets(7, 5, 5, 5));
         vbox.getChildren().add(label);
         VBox.setMargin(label, new Insets(0,0,0,3));
         vbox.getChildren().add(hbox);

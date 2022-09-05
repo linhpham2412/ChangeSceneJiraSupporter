@@ -6,51 +6,51 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@changeSceneStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.DashboardController">
    <children>
       <TilePane prefHeight="800.0" prefWidth="1280.0">
          <children>
-            <Pane prefHeight="800.0" prefWidth="1281.0">
+            <Pane id="parentPanel" prefHeight="800.0" prefWidth="1281.0">
                <TilePane.margin>
                   <Insets />
                </TilePane.margin>
                <children>
                   <Pane layoutX="107.0" layoutY="62.0" prefHeight="689.0" prefWidth="1068.0">
                      <children>
-                        <Button fx:id="btnICFITComment" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handelICFITComment" prefHeight="100.0" prefWidth="282.0" style="-fx-background-color: #5BA2B0;" text="IC FIT Comment" textFill="#cef2fb">
+                        <Button id="ButtonLightDB" fx:id="btnICFITComment" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handelICFITComment" prefHeight="100.0" prefWidth="282.0" text="IC FIT Comment" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button fx:id="btnDBMoveToICDefect" layoutX="14.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleICDefect" prefHeight="246.0" prefWidth="439.0" style="-fx-background-color: #5BA2B0;" text="Create IC Defect Description" textFill="#cef2fb">
+                        <Button id="ButtonLightDB" fx:id="btnDBMoveToICDefect" layoutX="14.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleICDefect" prefHeight="246.0" prefWidth="439.0" text="Create IC Defect Description" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button fx:id="btnDBFXT4EeyesComment" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#handelDBFXT4EeyesComment" prefHeight="77.0" prefWidth="320.0" style="-fx-background-color: #40707A;" text="FXT 4Eyes Comment" textFill="#cef2fb">
+                        <Button id="ButtonDarkDB" fx:id="btnDBFXT4EeyesComment" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#handelDBFXT4EeyesComment" prefHeight="77.0" prefWidth="320.0" text="FXT 4Eyes Comment" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button fx:id="btnDBTestingScopeManagement" layoutX="323.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleTestingScopeManagementMoving" prefHeight="212.0" prefWidth="412.0" style="-fx-background-color: #40707A;" text="Testing Scope Management" textFill="#cef2fb">
+                        <Button id="ButtonDarkDB" fx:id="btnDBTestingScopeManagement" layoutX="323.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleTestingScopeManagementMoving" prefHeight="212.0" prefWidth="412.0" text="Testing Scope Management" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button fx:id="btnDBFXTDefectDescription" layoutX="479.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleDBFXTDefectDescription" prefHeight="307.0" prefWidth="424.0" style="-fx-background-color: #40707A;" text="Create FXT Defect Description" textFill="#cef2fb">
+                        <Button id="ButtonDarkDB" fx:id="btnDBFXTDefectDescription" layoutX="479.0" layoutY="368.0" mnemonicParsing="false" onAction="#handleDBFXTDefectDescription" prefHeight="307.0" prefWidth="424.0" text="Create FXT Defect Description" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button fx:id="btnDataSettings" layoutX="769.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDataSettingsMoving" prefHeight="330.0" prefWidth="268.0" style="-fx-background-color: #40707A;" text="Data Settings" textFill="#cef2fb">
+                        <Button id="ButtonDarkDB" fx:id="btnDataSettings" layoutX="769.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDataSettingsMoving" prefHeight="330.0" prefWidth="268.0" text="Data Settings" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Button>
-                        <Button layoutX="919.0" layoutY="486.0" mnemonicParsing="false" prefHeight="189.0" prefWidth="117.0" style="-fx-background-color: #40707A;" text="Instruction" textFill="#cef2fb">
+                        <Button id="ButtonDarkDB" layoutX="919.0" layoutY="486.0" mnemonicParsing="false" prefHeight="189.0" prefWidth="117.0" text="Guide" textFill="#cef2fb">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="16.0" />
                            </font></Button>
-                        <Button fx:id="btnFXTFITComment" layoutX="14.0" layoutY="127.0" mnemonicParsing="false" onAction="#handelFXTFITComment" prefHeight="100.0" prefWidth="282.0" style="-fx-background-color: #40707A;" text="FXT FIT Comment" textFill="#cef2fb">
+                        <Button id="ButtonDarkDB" fx:id="btnFXTFITComment" layoutX="14.0" layoutY="127.0" mnemonicParsing="false" onAction="#handelFXTFITComment" prefHeight="100.0" prefWidth="282.0" text="FXT FIT Comment" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnDBIC4EyesComment" layoutX="14.0" layoutY="598.0" mnemonicParsing="false" onAction="#handelDBIC4EyesComment" prefHeight="77.0" prefWidth="320.0" style="-fx-background-color: #5BA2B0;" text="IC 4Eyes Comment" textFill="#cef2fb">
+                        <Button id="ButtonLightDB" fx:id="btnDBIC4EyesComment" layoutX="14.0" layoutY="598.0" mnemonicParsing="false" onAction="#handelDBIC4EyesComment" prefHeight="77.0" prefWidth="320.0" text="IC 4Eyes Comment" textFill="#cef2fb">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
