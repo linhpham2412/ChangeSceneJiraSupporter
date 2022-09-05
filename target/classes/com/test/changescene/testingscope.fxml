@@ -9,7 +9,7 @@
    <children>
       <TilePane prefHeight="800.0" prefWidth="1280.0" stylesheets="@changeSceneStyleSheet.css">
          <children>
-            <Pane prefHeight="800.0" prefWidth="1281.0">
+            <Pane id="parentPanel" prefHeight="800.0" prefWidth="1281.0">
                <TilePane.margin>
                   <Insets />
                </TilePane.margin>
@@ -18,7 +18,7 @@
                      <children>
                         <HBox layoutX="14.0" layoutY="4.0" spacing="10.0">
                            <children>
-                              <Button fx:id="btnTSMBackToDB" mnemonicParsing="false" onAction="#testingScopeBackToDashBoard" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #5BA2B0;" text="DB" textFill="#cef2fb">
+                              <Button fx:id="btnTSMBackToDB" mnemonicParsing="false" onAction="#testingScopeBackToDashBoard" prefHeight="40.0" prefWidth="40.0" styleClass="Button" text="DB" textFill="#cef2fb">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
@@ -51,11 +51,11 @@
                      <children>
                         <HBox layoutX="8.0" layoutY="8.0" prefHeight="724.0" prefWidth="1263.0" spacing="3.0">
                            <children>
-                              <VBox prefHeight="730.0" prefWidth="882.0" style="-fx-border-color: #64767A;">
+                              <VBox id="lightpanel" prefHeight="730.0" prefWidth="882.0">
                                  <children>
                                     <HBox prefHeight="39.0" prefWidth="875.0">
                                        <VBox.margin>
-                                          <Insets left="5.0" top="5.0" />
+                                          <Insets left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                        <children>
                                           <Label text="Ctrl -">
@@ -119,20 +119,23 @@
                                              </HBox.margin>
                                           </Button>
                                        </children>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
                                     </HBox>
                                     <TextArea prefHeight="700.0" prefWidth="880.0" styleClass="TextArea" wrapText="true" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="695.0" prefWidth="378.0" style="-fx-border-color: #64767A;">
+                              <VBox id="lightpanel" prefHeight="695.0" prefWidth="378.0">
                                  <children>
-                                    <HBox spacing="23.0">
+                                    <HBox spacing="20.0">
                                        <children>
                                           <Button mnemonicParsing="false" styleClass="Button" text="Load Template" textFill="#cef2fb" />
                                           <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Save Template" textFill="#cef2fb" />
                                           <Button fx:id="btnAddNewHeaderTestingScope" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#addNewHeaderTestingScope" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
                                        </children>
                                        <VBox.margin>
-                                          <Insets left="5.0" top="5.0" />
+                                          <Insets left="5.0" right="5.0" top="5.0" />
                                        </VBox.margin>
                                     </HBox>
                                     <ScrollPane fx:id="pngScroll" prefHeight="650.0" prefWidth="376.0">
@@ -143,11 +146,11 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </ScrollPane>
-                                    <HBox spacing="40.0">
+                                    <HBox spacing="30.0">
                                        <children>
                                           <Button mnemonicParsing="false" styleClass="Button" text="Copy Selected" textFill="#cef2fb" />
                                           <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Copy All" textFill="#cef2fb" />
-                                          <CheckBox mnemonicParsing="false" text="Copy for IC Jira">
+                                          <CheckBox id="checkBox" mnemonicParsing="false" text="Copy for IC Jira">
                                              <HBox.margin>
                                                 <Insets top="3.0" />
                                              </HBox.margin>
@@ -156,7 +159,7 @@
                                              </font></CheckBox>
                                        </children>
                                        <VBox.margin>
-                                          <Insets left="5.0" right="5.0" />
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
                                        </VBox.margin>
                                     </HBox>
                                  </children>
