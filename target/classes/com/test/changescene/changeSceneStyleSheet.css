@@ -103,7 +103,7 @@
 }
 
 #lightpanel{
-    -fx-border-color: #64767a;
+    -fx-border-color: white;
     -fx-border-style: solid;
     -fx-border-radius: 5px;
 }
@@ -120,12 +120,15 @@
     -fx-font-weight: bold;
 }
 
-#textBox{
-    -fx-background-color: linear-gradient(to bottom right, #ABFFF2, #A4F5D1);
+.text-input{
     -fx-font-size: 13px;
     -fx-text-fill: black;
     -fx-font-family: System;
     -fx-font-weight: regular;
+    -fx-border-style: solid;
+    -fx-border-radius: 0px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
 }
 
 #headerTable{

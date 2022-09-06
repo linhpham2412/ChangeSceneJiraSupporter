@@ -1,0 +1,11 @@
+BuildName,ServerName,SDK,SLOTName,InternalSLOT,URL,Status,Environment,IssueType,user,Language,Browser,UserName
+build name here,server name here,sdk here,slot name here,internal slot here,url here,Passed,localhost,Story,admin@thedigitalstack.com,English,Chrome,Linh Pham
+ , , , , , ,Failed,https://advisory-demo-test.incubegroup.com/,Defect,dev,Vietnamese,Firefox, 
+ , , , , , ,Blocked,https://advisory-jarden-dev.incubegroup.com/, ,qa,Italian,EDGE, 
+ , , , , , , ,https://advisory-jarden-test.incubegroup.com/, ,non-admin,Polish,Safari, 
+ , , , , , , , , , , ,API Test, 
+ , , , , , , , , , , ,Integration Test, 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 

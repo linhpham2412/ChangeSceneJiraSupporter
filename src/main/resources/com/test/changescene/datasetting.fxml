@@ -16,1110 +16,1118 @@
                <children>
                   <Pane id="parentPanel" layoutY="43.0" prefHeight="758.0" prefWidth="1280.0">
                      <children>
-                        <VBox id="lightpanel" layoutX="13.0" layoutY="44.0" prefHeight="330.0" prefWidth="280.0">
+                        <HBox layoutX="13.0" layoutY="13.0" prefHeight="350.0" prefWidth="1255.0" spacing="5.0">
                            <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Build Name" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="Build name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="280.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="273.0" text="Build Name" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingBuildName1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingBuildName10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Server Name" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingServerName1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingServerName10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="SDK" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingSDK1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSDK10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="150.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="SLOT" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingSLOT1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingSLOT10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="150.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Internal SLOT" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingInternalSLOT1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingInternalSLOT10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="250.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="URL" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingURL1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingURL10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
                            </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="298.0" layoutY="44.0" prefHeight="330.0" prefWidth="200.0">
+                        </HBox>
+                        <HBox layoutX="13.0" layoutY="385.0" prefHeight="350.0" prefWidth="1255.0" spacing="5.0">
                            <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Server Name" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="Server name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="150.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Item Status" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingItemStatus1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingItemStatus10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="400.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="364.0" text="Testing Environment" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingTestingEnvironment1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingEnvironment10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="150.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Issue Type" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingIssueType1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingIssueType10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="300.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="266.0" text="Testing Credential" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingTestingCredential1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingCredential10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Testing Language" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingTestingLanguage1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingLanguage10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox id="lightpanel" prefHeight="330.0" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Testing Type/Browser" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser1" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser2" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser3" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser4" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser5" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser6" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser7" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser8" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser9" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtSettingTestingTypeAndBrowser10" onKeyReleased="#onSettingTextBoxValueChange">
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
                            </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="503.0" layoutY="44.0" prefHeight="330.0" prefWidth="200.0">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="SDK" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="SDK information">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="708.0" layoutY="44.0" prefHeight="330.0" prefWidth="150.0">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="SLOT" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="SLOT name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="863.0" layoutY="44.0" prefHeight="330.0" prefWidth="150.0">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Internal SLOT" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="Internal SLOT name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="1018.0" layoutY="44.0" prefHeight="330.0" prefWidth="250.0">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="URL" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="URL information">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="13.0" layoutY="400.0" prefHeight="330.0" prefWidth="280.0">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Item Status" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="Build name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="298.0" layoutY="400.0" prefHeight="330.0" prefWidth="200.0" style="-fx-border-color: white;">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Testing Environment" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="Server name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="503.0" layoutY="400.0" prefHeight="330.0" prefWidth="200.0" style="-fx-border-color: white;">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Issue Type" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="SDK information">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="708.0" layoutY="400.0" prefHeight="330.0" prefWidth="150.0" style="-fx-border-color: white;">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Testing Credential" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="SLOT name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="863.0" layoutY="400.0" prefHeight="330.0" prefWidth="150.0" style="-fx-border-color: white;">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Testing Language" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="Internal SLOT name">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox id="lightpanel" layoutX="1018.0" layoutY="400.0" prefHeight="330.0" prefWidth="250.0" style="-fx-border-color: white;">
-                           <children>
-                              <Label id="headerTable" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="237.0" text="Testing Type/Browser" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" top="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField id="textBox" promptText="URL information">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                              <TextField id="textBox">
-                                 <VBox.margin>
-                                    <Insets top="1.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
+                        </HBox>
                      </children>
                   </Pane>
                   <Pane prefHeight="48.0" prefWidth="1281.0" style="-fx-background-color: #40707A;">
@@ -1143,7 +1151,7 @@
                                  </HBox.margin>
                               </Label>
                               <Separator orientation="VERTICAL" prefHeight="40.0" />
-                              <Button layoutX="200.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" styleClass="Button" text="Save" textFill="#cef2fb">
+                              <Button fx:id="btnSaveSetting" layoutX="200.0" layoutY="10.0" mnemonicParsing="false" onAction="#exportSettingsToFile" prefHeight="30.0" prefWidth="50.0" styleClass="Button" text="Save" textFill="#cef2fb">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
@@ -1151,7 +1159,7 @@
                                     <Insets left="10.0" top="5.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" styleClass="Button" text="Load" textFill="#cef2fb">
+                              <Button fx:id="btnLoadSetting" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#importSettingsFromFile" prefHeight="30.0" prefWidth="50.0" styleClass="Button" text="Load" textFill="#cef2fb">
                                  <font>
                                     <Font size="13.0" />
                                  </font>
@@ -1160,13 +1168,13 @@
                                  </HBox.margin>
                               </Button>
                               <Separator prefWidth="160.0" visible="false" />
-                              <DatePicker prefHeight="35.0" prefWidth="267.0" promptText="Release Date" showWeekNumbers="true" styleClass="Button">
+                              <DatePicker fx:id="datepickDateReleased" prefHeight="35.0" prefWidth="267.0" promptText="Release Date" showWeekNumbers="true" styleClass="Button">
                                  <HBox.margin>
                                     <Insets top="2.0" />
                                  </HBox.margin>
                               </DatePicker>
                               <Separator prefWidth="88.0" visible="false" />
-                              <TextField id="textBoxName" prefHeight="40.0" prefWidth="380.0" promptText="Your Name Here">
+                              <TextField id="textBoxName" fx:id="txtUserName" prefHeight="40.0" prefWidth="380.0" promptText="Your Name Here">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
