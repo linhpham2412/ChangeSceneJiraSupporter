@@ -3,6 +3,7 @@ package com.test.changescene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,9 +12,12 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class DashboardController {
+public class DashboardController implements Initializable {
+    public supporterUtils supporterUtilDashBoard = new supporterUtils();
 
     public Button btnDataSettings;
     public Button btnDBTestingScopeManagement;
@@ -23,6 +27,7 @@ public class DashboardController {
     public Button btnFXTFITComment;
     public Button btnDBIC4EyesComment;
     public Button btnDBFXT4EeyesComment;
+    public Label txtDashBoardYourName;
 
     @FXML
     private void handleDataSettingsMoving(ActionEvent event) {
@@ -128,5 +133,10 @@ public class DashboardController {
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        txtDashBoardYourName.setText(supporterUtilDashBoard.getUserName());
     }
 }

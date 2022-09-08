@@ -184,6 +184,7 @@ public class DataSettingsController implements Initializable {
             e.printStackTrace();
         }
     }
+    supporterUtils supporterUtil = new supporterUtils();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -197,7 +198,6 @@ public class DataSettingsController implements Initializable {
         supporterSetting.add(setting8);
         supporterSetting.add(setting9);
         supporterSetting.add(setting10);
-        setting1.setSettingFileName("supporterSettings.csv");
         settingBuildNameTextFields.addAll(List.of(txtSettingBuildName1,txtSettingBuildName2,txtSettingBuildName3,txtSettingBuildName4,txtSettingBuildName5,txtSettingBuildName6,txtSettingBuildName7,txtSettingBuildName8,txtSettingBuildName9,txtSettingBuildName10));
         settingServerNameTextFields.addAll(List.of(txtSettingServerName1,txtSettingServerName2,txtSettingServerName3,txtSettingServerName4,txtSettingServerName5,txtSettingServerName6,txtSettingServerName7,txtSettingServerName8,txtSettingServerName9,txtSettingServerName10));
         settingSDKTextFields.addAll(List.of(txtSettingSDK1,txtSettingSDK2,txtSettingSDK3,txtSettingSDK4,txtSettingSDK5,txtSettingSDK6,txtSettingSDK7,txtSettingSDK8,txtSettingSDK9,txtSettingSDK10));
@@ -210,7 +210,8 @@ public class DataSettingsController implements Initializable {
         settingTestingCredentialTextFields.addAll(List.of(txtSettingTestingCredential1,txtSettingTestingCredential2,txtSettingTestingCredential3,txtSettingTestingCredential4,txtSettingTestingCredential5,txtSettingTestingCredential6,txtSettingTestingCredential7,txtSettingTestingCredential8,txtSettingTestingCredential9,txtSettingTestingCredential10));
         settingTestingLanguageTextFields.addAll(List.of(txtSettingTestingLanguage1,txtSettingTestingLanguage2,txtSettingTestingLanguage3,txtSettingTestingLanguage4,txtSettingTestingLanguage5,txtSettingTestingLanguage6,txtSettingTestingLanguage7,txtSettingTestingLanguage8,txtSettingTestingLanguage9,txtSettingTestingLanguage10));
         settingTestingTypeAndBrowserTextFields.addAll(List.of(txtSettingTestingTypeAndBrowser1,txtSettingTestingTypeAndBrowser2,txtSettingTestingTypeAndBrowser3,txtSettingTestingTypeAndBrowser4,txtSettingTestingTypeAndBrowser5,txtSettingTestingTypeAndBrowser6,txtSettingTestingTypeAndBrowser7,txtSettingTestingTypeAndBrowser8,txtSettingTestingTypeAndBrowser9,txtSettingTestingTypeAndBrowser10));
-        importSettingsFromFile();
+        supporterSetting = supporterUtil.importSettingsFromFile();
+        initializeSettingData();
     }
 
     //back to dashboard button
@@ -231,105 +232,8 @@ public class DataSettingsController implements Initializable {
 
     @FXML
     void importSettingsFromFile() {
-        try (FileReader fr = new FileReader(currentPath + "/" + supporterSetting.get(0).getSettingFileName(), StandardCharsets.UTF_8); BufferedReader reader = new BufferedReader(fr)) {
-            String importedLine;
-            int columnIndex = 0;
-            int rowIndex = 0;
-            int previousDelimiterIndex = 0;
-            //Read each line and store each value in each row to setting data based on the column number of the value in the line. At the end store both near last and the last value.
-            while ((importedLine = reader.readLine()) != null) {
-                if (!importedLine.substring(0, importedLine.indexOf(",")).equals("BuildName")) {
-                    for (int i = -1; (i = importedLine.indexOf(",", i + 1)) != -1; i++) {
-                        switch (columnIndex) {
-                            case 0 -> {
-                                supporterSetting.get(rowIndex).setBuildName(importedLine.substring(0, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 1 -> {
-                                supporterSetting.get(rowIndex).setServerName(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 2 -> {
-                                supporterSetting.get(rowIndex).setSdk(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 3 -> {
-                                supporterSetting.get(rowIndex).setSlotName(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 4 -> {
-                                supporterSetting.get(rowIndex).setInternalSlot(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 5 -> {
-                                supporterSetting.get(rowIndex).setUrl(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 6 -> {
-                                supporterSetting.get(rowIndex).setStatus(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 7 -> {
-                                supporterSetting.get(rowIndex).setEnvironment(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 8 -> {
-                                supporterSetting.get(rowIndex).setIssueType(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 9 -> {
-                                supporterSetting.get(rowIndex).setTestUser(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 10 -> {
-                                supporterSetting.get(rowIndex).setLanguage(importedLine.substring(previousDelimiterIndex, i).trim());
-                                previousDelimiterIndex = i + 1;
-                                columnIndex += 1;
-                            }
-                            case 11 -> {
-                                supporterSetting.get(rowIndex).setBrowser(importedLine.substring(previousDelimiterIndex, i).trim());
-                                supporterSetting.get(rowIndex).setUserName(importedLine.substring(i + 1));
-                                //end of line
-                                previousDelimiterIndex = 0;
-                                columnIndex = 0;
-                                //moving to next row in import file
-                                rowIndex += 1;
-                            }
-                        }
-                    }
-                }
-            }
-        } catch (IOException e) {
-            //Create new blank file if file not exist
-            StringBuilder sb = new StringBuilder();
-            sb.append("BuildName,ServerName,SDK,SLOTName,InternalSLOT,URL,Status,Environment,IssueType,user,Language,Browser,UserName").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            sb.append(" , , , , , , , , , , , , ").append("\n");
-            try (var fw = new FileWriter(currentPath + "/" + supporterSetting.get(0).getSettingFileName(), StandardCharsets.UTF_8)) {
-                fw.write(String.valueOf(sb));
-            } catch (IOException ignored) {
-            }
-        }
+        supporterSetting = supporterUtil.importSettingsFromFile();
         initializeSettingData();
-//        importSuccessAlert.showAndWait();
     }
 
     private void initializeSettingData() {
@@ -352,46 +256,7 @@ public class DataSettingsController implements Initializable {
 
     @FXML
     void exportSettingsToFile() throws IOException {
-        //check for empty value and replace with blank in order to avoid exception while import with empty value
-        try {
-            for (SettingData sd : supporterSetting) {
-                if (sd.getBuildName().isEmpty()) sd.setBuildName(" ");
-                if (sd.getServerName().isEmpty()) sd.setServerName(" ");
-                if (sd.getSdk().isEmpty()) sd.setSdk(" ");
-                if (sd.getSlotName().isEmpty()) sd.setSlotName(" ");
-                if (sd.getInternalSlot().isEmpty()) sd.setInternalSlot(" ");
-                if (sd.getUrl().isEmpty()) sd.setUrl(" ");
-                if (sd.getEnvironment().isEmpty()) sd.setEnvironment(" ");
-                if (sd.getTestUser().isEmpty()) sd.setTestUser(" ");
-                if (sd.getLanguage().isEmpty()) sd.setLanguage(" ");
-                if (sd.getBrowser().isEmpty()) sd.setBrowser(" ");
-                if (sd.getStatus().isEmpty()) sd.setStatus(" ");
-                if (sd.getIssueType().isEmpty()) sd.setIssueType(" ");
-                if (sd.getUserName().equals(" ")) sd.setUserName(" ");
-            }
-        } catch (Exception e) {
-            for (SettingData sd : supporterSetting) {
-                sd.setBuildName(" ");
-                sd.setServerName(" ");
-                sd.setSdk(" ");
-                sd.setSlotName(" ");
-                sd.setInternalSlot(" ");
-                sd.setUrl(" ");
-                sd.setEnvironment(" ");
-                sd.setTestUser(" ");
-                sd.setLanguage(" ");
-                sd.setBrowser(" ");
-                sd.setStatus(" ");
-                sd.setIssueType(" ");
-                sd.setUserName(" ");
-            }
-        }
-        String exportContent = supporterSetting.stream().map(sd -> sd.getBuildName() + "," + sd.getServerName() + "," + sd.getSdk() + "," + sd.getSlotName() + "," + sd.getInternalSlot() + "," + sd.getUrl() + "," + sd.getStatus() + "," + sd.getEnvironment() + "," + sd.getIssueType() + "," + sd.getTestUser() + "," + sd.getLanguage() + "," + sd.getBrowser() + "," + sd.getUserName() + "\n").collect(Collectors.joining("", "BuildName,ServerName,SDK,SLOTName,InternalSLOT,URL,Status,Environment,IssueType,user,Language,Browser,UserName" + "\n", ""));
-        try (var fw = new FileWriter(currentPath + "/" + supporterSetting.get(0).getSettingFileName(), StandardCharsets.UTF_8)) {
-            fw.write(exportContent);
-//            exportSuccessAlert.showAndWait();
-        } catch (IOException e) {
-        }
+        supporterUtil.exportSettingsToFile(supporterSetting);
     }
 
     public void onSettingTextBoxValueChange(KeyEvent keyEvent) {
