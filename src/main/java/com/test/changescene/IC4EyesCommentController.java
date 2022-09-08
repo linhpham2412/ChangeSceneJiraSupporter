@@ -20,8 +20,8 @@ import java.util.ResourceBundle;
 import java.util.stream.IntStream;
 
 public class IC4EyesCommentController implements Initializable {
-    public Label txtIC4EyesYourName;
     public Button btnIC4eyesBackToDB;
+    public Label txtIC4EyesYourName;
     public CheckBox cbxIC4EyesBuildInformationTitle;
     public CheckBox cbxIC4EyesBuildInformation1;
     public CheckBox cbxIC4EyesBuildInformation2;
@@ -179,7 +179,6 @@ public class IC4EyesCommentController implements Initializable {
     SettingData setting9IC4eyes = new SettingData();
     SettingData setting10IC4eyes = new SettingData();
 
-//    public List<CheckBox> cbxIC4EyesTitleCheckboxes = new ArrayList<>();
 
     public void handelbtnIC4eyesBackToDB(ActionEvent actionEvent) {
         try {
@@ -211,7 +210,7 @@ public class IC4EyesCommentController implements Initializable {
         cbxIC4EyesTestingTypeAndBrowserList.addAll(List.of(cbxIC4EyesTestingTypeAndBrowser1, cbxIC4EyesTestingTypeAndBrowser2, cbxIC4EyesTestingTypeAndBrowser3, cbxIC4EyesTestingTypeAndBrowser4, cbxIC4EyesTestingTypeAndBrowser5, cbxIC4EyesTestingTypeAndBrowser6, cbxIC4EyesTestingTypeAndBrowser7, cbxIC4EyesTestingTypeAndBrowser8, cbxIC4EyesTestingTypeAndBrowser9, cbxIC4EyesTestingTypeAndBrowser10));
         cbxIC4EyesTestingCredentialList.addAll(List.of(cbxIC4EyesTestingCredential1, cbxIC4EyesTestingCredential2, cbxIC4EyesTestingCredential3, cbxIC4EyesTestingCredential4, cbxIC4EyesTestingCredential5, cbxIC4EyesTestingCredential6, cbxIC4EyesTestingCredential7, cbxIC4EyesTestingCredential8, cbxIC4EyesTestingCredential9, cbxIC4EyesTestingCredential10));
         cbxIC4EyesTestingLanguageList.addAll(List.of(cbxIC4EyesTestingLanguage1, cbxIC4EyesTestingLanguage2, cbxIC4EyesTestingLanguage3, cbxIC4EyesTestingLanguage4, cbxIC4EyesTestingLanguage5, cbxIC4EyesTestingLanguage6, cbxIC4EyesTestingLanguage7, cbxIC4EyesTestingLanguage8, cbxIC4EyesTestingLanguage9, cbxIC4EyesTestingLanguage10));
-//        cbxIC4EyesTitleCheckboxes.addAll(List.of(cbxIC4EyesBuildInformationTitle,cbxIC4EyesEnvironmentTitle,cbxIC4EyesInternalSLOTTitle,cbxIC4EyesIssueTypeTitle,cbxIC4EyesSDKNameTitle,cbxIC4EyesServerNameTitle,cbxIC4EyesSLOTNameTitle,cbxIC4EyesTestingCredentialTitle,cbxIC4EyesTestingLanguageTitle,cbxIC4EyesTestingTypeAndBrowserTitle,cbxIC4EyesURLInformationTitle,cbxIC4EyesIssueStatusTitle));
+
 
         supporterSettingsIC4EyesList = supporterUtilIC4Eyes.importSettingsFromFile();
         txtIC4EyesYourName.setText(supporterUtilIC4Eyes.getUserName());
