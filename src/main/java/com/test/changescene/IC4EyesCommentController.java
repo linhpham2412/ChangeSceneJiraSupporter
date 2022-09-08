@@ -21,19 +21,6 @@ import java.util.stream.IntStream;
 
 public class IC4EyesCommentController implements Initializable {
     public Label txtIC4EyesYourName;
-    supporterUtils supporterUtilIC4Eyes = new supporterUtils();
-    List<SettingData> supporterSettingsIC4EyesList = new ArrayList<>();
-    SettingData setting1IC4eyes = new SettingData();
-    SettingData setting2IC4eyes = new SettingData();
-    SettingData setting3IC4eyes = new SettingData();
-    SettingData setting4IC4eyes = new SettingData();
-    SettingData setting5IC4eyes = new SettingData();
-    SettingData setting6IC4eyes = new SettingData();
-    SettingData setting7IC4eyes = new SettingData();
-    SettingData setting8IC4eyes = new SettingData();
-    SettingData setting9IC4eyes = new SettingData();
-    SettingData setting10IC4eyes = new SettingData();
-
     public Button btnIC4eyesBackToDB;
     public CheckBox cbxIC4EyesBuildInformationTitle;
     public CheckBox cbxIC4EyesBuildInformation1;
@@ -179,6 +166,20 @@ public class IC4EyesCommentController implements Initializable {
     public CheckBox cbxIC4EyesTestingLanguage9;
     public CheckBox cbxIC4EyesTestingLanguage10;
     public List<CheckBox> cbxIC4EyesTestingLanguageList = new ArrayList<>();
+    supporterUtils supporterUtilIC4Eyes = new supporterUtils();
+    List<SettingData> supporterSettingsIC4EyesList = new ArrayList<>();
+    SettingData setting1IC4eyes = new SettingData();
+    SettingData setting2IC4eyes = new SettingData();
+    SettingData setting3IC4eyes = new SettingData();
+    SettingData setting4IC4eyes = new SettingData();
+    SettingData setting5IC4eyes = new SettingData();
+    SettingData setting6IC4eyes = new SettingData();
+    SettingData setting7IC4eyes = new SettingData();
+    SettingData setting8IC4eyes = new SettingData();
+    SettingData setting9IC4eyes = new SettingData();
+    SettingData setting10IC4eyes = new SettingData();
+
+//    public List<CheckBox> cbxIC4EyesTitleCheckboxes = new ArrayList<>();
 
     public void handelbtnIC4eyesBackToDB(ActionEvent actionEvent) {
         try {
@@ -187,7 +188,7 @@ public class IC4EyesCommentController implements Initializable {
             Scene dashboard = new Scene(root);
             //This line gets the Stage Information
             //here we get the stage from event action and setting the root element in the scene and display scene with stage object (window) which is retrieved from action event
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(dashboard);
             window.show();
         } catch (IOException ex) {
@@ -197,33 +198,111 @@ public class IC4EyesCommentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        supporterSettingsIC4EyesList.addAll(List.of(setting1IC4eyes,setting2IC4eyes,setting3IC4eyes,setting4IC4eyes,setting5IC4eyes,setting6IC4eyes,setting7IC4eyes,setting8IC4eyes,setting9IC4eyes,setting10IC4eyes));
-        cbxIC4EyesBuildInformationList.addAll(List.of(cbxIC4EyesBuildInformation1,cbxIC4EyesBuildInformation2,cbxIC4EyesBuildInformation3,cbxIC4EyesBuildInformation4,cbxIC4EyesBuildInformation5,cbxIC4EyesBuildInformation6,cbxIC4EyesBuildInformation7,cbxIC4EyesBuildInformation8,cbxIC4EyesBuildInformation9,cbxIC4EyesBuildInformation10));
-        cbxIC4EyesServerNameList.addAll(List.of(cbxIC4EyesServerName1,cbxIC4EyesServerName2,cbxIC4EyesServerName3,cbxIC4EyesServerName4,cbxIC4EyesServerName5,cbxIC4EyesServerName6,cbxIC4EyesServerName7,cbxIC4EyesServerName8,cbxIC4EyesServerName9,cbxIC4EyesServerName10));
-        cbxIC4EyesSDKNameList.addAll(List.of(cbxIC4EyesSDKName1,cbxIC4EyesSDKName2,cbxIC4EyesSDKName3,cbxIC4EyesSDKName4,cbxIC4EyesSDKName5,cbxIC4EyesSDKName6,cbxIC4EyesSDKName7,cbxIC4EyesSDKName8,cbxIC4EyesSDKName9,cbxIC4EyesSDKName10));
-        cbxIC4EyesSLOTNameList.addAll(List.of(cbxIC4EyesSLOTName1,cbxIC4EyesSLOTName2,cbxIC4EyesSLOTName3,cbxIC4EyesSLOTName4,cbxIC4EyesSLOTName5,cbxIC4EyesSLOTName6,cbxIC4EyesSLOTName7,cbxIC4EyesSLOTName8,cbxIC4EyesSLOTName9,cbxIC4EyesSLOTName10));
-        cbxIC4EyesInternalSLOTList.addAll(List.of(cbxIC4EyesInternalSLOT1,cbxIC4EyesInternalSLOT2,cbxIC4EyesInternalSLOT3,cbxIC4EyesInternalSLOT4,cbxIC4EyesInternalSLOT5,cbxIC4EyesInternalSLOT6,cbxIC4EyesInternalSLOT7,cbxIC4EyesInternalSLOT8,cbxIC4EyesInternalSLOT9,cbxIC4EyesInternalSLOT10));
-        cbxIC4EyesURLInformationList.addAll(List.of(cbxIC4EyesURLInformation1,cbxIC4EyesURLInformation2,cbxIC4EyesURLInformation3,cbxIC4EyesURLInformation4,cbxIC4EyesURLInformation5,cbxIC4EyesURLInformation6,cbxIC4EyesURLInformation7,cbxIC4EyesURLInformation8,cbxIC4EyesURLInformation9,cbxIC4EyesURLInformation10));
-        cbxIC4EyesIssueTypeList.addAll(List.of(cbxIC4EyesIssueType1,cbxIC4EyesIssueType2,cbxIC4EyesIssueType3,cbxIC4EyesIssueType4,cbxIC4EyesIssueType5,cbxIC4EyesIssueType6,cbxIC4EyesIssueType7,cbxIC4EyesIssueType8,cbxIC4EyesIssueType9,cbxIC4EyesIssueType10));
-        cbxIC4EyesIssueStatusList.addAll(List.of(cbxIC4EyesIssueStatus1,cbxIC4EyesIssueStatus2,cbxIC4EyesIssueStatus3,cbxIC4EyesIssueStatus4,cbxIC4EyesIssueStatus5,cbxIC4EyesIssueStatus6,cbxIC4EyesIssueStatus7,cbxIC4EyesIssueStatus8,cbxIC4EyesIssueStatus9,cbxIC4EyesIssueStatus10));
-        cbxIC4EyesEnvironmentList.addAll(List.of(cbxIC4EyesEnvironment1,cbxIC4EyesEnvironment2,cbxIC4EyesEnvironment3,cbxIC4EyesEnvironment4,cbxIC4EyesEnvironment5,cbxIC4EyesEnvironment6,cbxIC4EyesEnvironment7,cbxIC4EyesEnvironment8,cbxIC4EyesEnvironment9,cbxIC4EyesEnvironment10));
-        cbxIC4EyesTestingTypeAndBrowserList.addAll(List.of(cbxIC4EyesTestingTypeAndBrowser1,cbxIC4EyesTestingTypeAndBrowser2,cbxIC4EyesTestingTypeAndBrowser3,cbxIC4EyesTestingTypeAndBrowser4,cbxIC4EyesTestingTypeAndBrowser5,cbxIC4EyesTestingTypeAndBrowser6,cbxIC4EyesTestingTypeAndBrowser7,cbxIC4EyesTestingTypeAndBrowser8,cbxIC4EyesTestingTypeAndBrowser9,cbxIC4EyesTestingTypeAndBrowser10));
-        cbxIC4EyesTestingCredentialList.addAll(List.of(cbxIC4EyesTestingCredential1,cbxIC4EyesTestingCredential2,cbxIC4EyesTestingCredential3,cbxIC4EyesTestingCredential4,cbxIC4EyesTestingCredential5,cbxIC4EyesTestingCredential6,cbxIC4EyesTestingCredential7,cbxIC4EyesTestingCredential8,cbxIC4EyesTestingCredential9,cbxIC4EyesTestingCredential10));
-        cbxIC4EyesTestingLanguageList.addAll(List.of(cbxIC4EyesTestingLanguage1,cbxIC4EyesTestingLanguage2,cbxIC4EyesTestingLanguage3,cbxIC4EyesTestingLanguage4,cbxIC4EyesTestingLanguage5,cbxIC4EyesTestingLanguage6,cbxIC4EyesTestingLanguage7,cbxIC4EyesTestingLanguage8,cbxIC4EyesTestingLanguage9,cbxIC4EyesTestingLanguage10));
+        supporterSettingsIC4EyesList.addAll(List.of(setting1IC4eyes, setting2IC4eyes, setting3IC4eyes, setting4IC4eyes, setting5IC4eyes, setting6IC4eyes, setting7IC4eyes, setting8IC4eyes, setting9IC4eyes, setting10IC4eyes));
+        cbxIC4EyesBuildInformationList.addAll(List.of(cbxIC4EyesBuildInformation1, cbxIC4EyesBuildInformation2, cbxIC4EyesBuildInformation3, cbxIC4EyesBuildInformation4, cbxIC4EyesBuildInformation5, cbxIC4EyesBuildInformation6, cbxIC4EyesBuildInformation7, cbxIC4EyesBuildInformation8, cbxIC4EyesBuildInformation9, cbxIC4EyesBuildInformation10));
+        cbxIC4EyesServerNameList.addAll(List.of(cbxIC4EyesServerName1, cbxIC4EyesServerName2, cbxIC4EyesServerName3, cbxIC4EyesServerName4, cbxIC4EyesServerName5, cbxIC4EyesServerName6, cbxIC4EyesServerName7, cbxIC4EyesServerName8, cbxIC4EyesServerName9, cbxIC4EyesServerName10));
+        cbxIC4EyesSDKNameList.addAll(List.of(cbxIC4EyesSDKName1, cbxIC4EyesSDKName2, cbxIC4EyesSDKName3, cbxIC4EyesSDKName4, cbxIC4EyesSDKName5, cbxIC4EyesSDKName6, cbxIC4EyesSDKName7, cbxIC4EyesSDKName8, cbxIC4EyesSDKName9, cbxIC4EyesSDKName10));
+        cbxIC4EyesSLOTNameList.addAll(List.of(cbxIC4EyesSLOTName1, cbxIC4EyesSLOTName2, cbxIC4EyesSLOTName3, cbxIC4EyesSLOTName4, cbxIC4EyesSLOTName5, cbxIC4EyesSLOTName6, cbxIC4EyesSLOTName7, cbxIC4EyesSLOTName8, cbxIC4EyesSLOTName9, cbxIC4EyesSLOTName10));
+        cbxIC4EyesInternalSLOTList.addAll(List.of(cbxIC4EyesInternalSLOT1, cbxIC4EyesInternalSLOT2, cbxIC4EyesInternalSLOT3, cbxIC4EyesInternalSLOT4, cbxIC4EyesInternalSLOT5, cbxIC4EyesInternalSLOT6, cbxIC4EyesInternalSLOT7, cbxIC4EyesInternalSLOT8, cbxIC4EyesInternalSLOT9, cbxIC4EyesInternalSLOT10));
+        cbxIC4EyesURLInformationList.addAll(List.of(cbxIC4EyesURLInformation1, cbxIC4EyesURLInformation2, cbxIC4EyesURLInformation3, cbxIC4EyesURLInformation4, cbxIC4EyesURLInformation5, cbxIC4EyesURLInformation6, cbxIC4EyesURLInformation7, cbxIC4EyesURLInformation8, cbxIC4EyesURLInformation9, cbxIC4EyesURLInformation10));
+        cbxIC4EyesIssueTypeList.addAll(List.of(cbxIC4EyesIssueType1, cbxIC4EyesIssueType2, cbxIC4EyesIssueType3, cbxIC4EyesIssueType4, cbxIC4EyesIssueType5, cbxIC4EyesIssueType6, cbxIC4EyesIssueType7, cbxIC4EyesIssueType8, cbxIC4EyesIssueType9, cbxIC4EyesIssueType10));
+        cbxIC4EyesIssueStatusList.addAll(List.of(cbxIC4EyesIssueStatus1, cbxIC4EyesIssueStatus2, cbxIC4EyesIssueStatus3, cbxIC4EyesIssueStatus4, cbxIC4EyesIssueStatus5, cbxIC4EyesIssueStatus6, cbxIC4EyesIssueStatus7, cbxIC4EyesIssueStatus8, cbxIC4EyesIssueStatus9, cbxIC4EyesIssueStatus10));
+        cbxIC4EyesEnvironmentList.addAll(List.of(cbxIC4EyesEnvironment1, cbxIC4EyesEnvironment2, cbxIC4EyesEnvironment3, cbxIC4EyesEnvironment4, cbxIC4EyesEnvironment5, cbxIC4EyesEnvironment6, cbxIC4EyesEnvironment7, cbxIC4EyesEnvironment8, cbxIC4EyesEnvironment9, cbxIC4EyesEnvironment10));
+        cbxIC4EyesTestingTypeAndBrowserList.addAll(List.of(cbxIC4EyesTestingTypeAndBrowser1, cbxIC4EyesTestingTypeAndBrowser2, cbxIC4EyesTestingTypeAndBrowser3, cbxIC4EyesTestingTypeAndBrowser4, cbxIC4EyesTestingTypeAndBrowser5, cbxIC4EyesTestingTypeAndBrowser6, cbxIC4EyesTestingTypeAndBrowser7, cbxIC4EyesTestingTypeAndBrowser8, cbxIC4EyesTestingTypeAndBrowser9, cbxIC4EyesTestingTypeAndBrowser10));
+        cbxIC4EyesTestingCredentialList.addAll(List.of(cbxIC4EyesTestingCredential1, cbxIC4EyesTestingCredential2, cbxIC4EyesTestingCredential3, cbxIC4EyesTestingCredential4, cbxIC4EyesTestingCredential5, cbxIC4EyesTestingCredential6, cbxIC4EyesTestingCredential7, cbxIC4EyesTestingCredential8, cbxIC4EyesTestingCredential9, cbxIC4EyesTestingCredential10));
+        cbxIC4EyesTestingLanguageList.addAll(List.of(cbxIC4EyesTestingLanguage1, cbxIC4EyesTestingLanguage2, cbxIC4EyesTestingLanguage3, cbxIC4EyesTestingLanguage4, cbxIC4EyesTestingLanguage5, cbxIC4EyesTestingLanguage6, cbxIC4EyesTestingLanguage7, cbxIC4EyesTestingLanguage8, cbxIC4EyesTestingLanguage9, cbxIC4EyesTestingLanguage10));
+//        cbxIC4EyesTitleCheckboxes.addAll(List.of(cbxIC4EyesBuildInformationTitle,cbxIC4EyesEnvironmentTitle,cbxIC4EyesInternalSLOTTitle,cbxIC4EyesIssueTypeTitle,cbxIC4EyesSDKNameTitle,cbxIC4EyesServerNameTitle,cbxIC4EyesSLOTNameTitle,cbxIC4EyesTestingCredentialTitle,cbxIC4EyesTestingLanguageTitle,cbxIC4EyesTestingTypeAndBrowserTitle,cbxIC4EyesURLInformationTitle,cbxIC4EyesIssueStatusTitle));
 
         supporterSettingsIC4EyesList = supporterUtilIC4Eyes.importSettingsFromFile();
         txtIC4EyesYourName.setText(supporterUtilIC4Eyes.getUserName());
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesBuildInformationList.get(index).setText(supporterSettingsIC4EyesList.get(index).getBuildName()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesServerNameList.get(index).setText(supporterSettingsIC4EyesList.get(index).getServerName()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesSDKNameList.get(index).setText(supporterSettingsIC4EyesList.get(index).getSdk()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesSLOTNameList.get(index).setText(supporterSettingsIC4EyesList.get(index).getSlotName()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesInternalSLOTList.get(index).setText(supporterSettingsIC4EyesList.get(index).getInternalSlot()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesURLInformationList.get(index).setText(supporterSettingsIC4EyesList.get(index).getUrl()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesIssueTypeList.get(index).setText(supporterSettingsIC4EyesList.get(index).getIssueType()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesIssueStatusList.get(index).setText(supporterSettingsIC4EyesList.get(index).getStatus()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesEnvironmentList.get(index).setText(supporterSettingsIC4EyesList.get(index).getEnvironment()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesTestingTypeAndBrowserList.get(index).setText(supporterSettingsIC4EyesList.get(index).getBrowser()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesTestingCredentialList.get(index).setText(supporterSettingsIC4EyesList.get(index).getTestUser()));
-        IntStream.range(0,10).forEach(index -> cbxIC4EyesTestingLanguageList.get(index).setText(supporterSettingsIC4EyesList.get(index).getLanguage()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesBuildInformationList.get(index).setText(supporterSettingsIC4EyesList.get(index).getBuildName()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesServerNameList.get(index).setText(supporterSettingsIC4EyesList.get(index).getServerName()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesSDKNameList.get(index).setText(supporterSettingsIC4EyesList.get(index).getSdk()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesSLOTNameList.get(index).setText(supporterSettingsIC4EyesList.get(index).getSlotName()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesInternalSLOTList.get(index).setText(supporterSettingsIC4EyesList.get(index).getInternalSlot()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesURLInformationList.get(index).setText(supporterSettingsIC4EyesList.get(index).getUrl()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesIssueTypeList.get(index).setText(supporterSettingsIC4EyesList.get(index).getIssueType()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesIssueStatusList.get(index).setText(supporterSettingsIC4EyesList.get(index).getStatus()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesEnvironmentList.get(index).setText(supporterSettingsIC4EyesList.get(index).getEnvironment()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesTestingTypeAndBrowserList.get(index).setText(supporterSettingsIC4EyesList.get(index).getBrowser()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesTestingCredentialList.get(index).setText(supporterSettingsIC4EyesList.get(index).getTestUser()));
+        IntStream.range(0, 10).forEach(index -> cbxIC4EyesTestingLanguageList.get(index).setText(supporterSettingsIC4EyesList.get(index).getLanguage()));
+    }
+
+    public void handleIC4EyesTitleChecked(ActionEvent actionEvent) {
+        CheckBox actionTitleCheckbox = (CheckBox) actionEvent.getSource();
+        if (actionTitleCheckbox.equals(cbxIC4EyesBuildInformationTitle)) {
+            if (cbxIC4EyesBuildInformationTitle.isSelected()) {
+                cbxIC4EyesBuildInformationList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesBuildInformationList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        } else if (actionTitleCheckbox.equals(cbxIC4EyesServerNameTitle)) {
+            if (cbxIC4EyesServerNameTitle.isSelected()) {
+                cbxIC4EyesServerNameList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesServerNameList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesSDKNameTitle)) {
+            if (cbxIC4EyesSDKNameTitle.isSelected()) {
+                cbxIC4EyesSDKNameList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesSDKNameList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesSLOTNameTitle)) {
+            if (cbxIC4EyesSLOTNameTitle.isSelected()) {
+                cbxIC4EyesSLOTNameList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesSLOTNameList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesInternalSLOTTitle)) {
+            if (cbxIC4EyesInternalSLOTTitle.isSelected()) {
+                cbxIC4EyesInternalSLOTList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesInternalSLOTList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesURLInformationTitle)) {
+            if (cbxIC4EyesURLInformationTitle.isSelected()) {
+                cbxIC4EyesURLInformationList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesURLInformationList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesIssueTypeTitle)) {
+            if (cbxIC4EyesIssueTypeTitle.isSelected()) {
+                cbxIC4EyesIssueTypeList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesIssueTypeList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesIssueStatusTitle)) {
+            if (cbxIC4EyesIssueStatusTitle.isSelected()) {
+                cbxIC4EyesIssueStatusList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesIssueStatusList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesEnvironmentTitle)) {
+            if (cbxIC4EyesEnvironmentTitle.isSelected()) {
+                cbxIC4EyesEnvironmentList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesEnvironmentList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesTestingTypeAndBrowserTitle)) {
+            if (cbxIC4EyesTestingTypeAndBrowserTitle.isSelected()) {
+                cbxIC4EyesTestingTypeAndBrowserList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesTestingTypeAndBrowserList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesTestingCredentialTitle)) {
+            if (cbxIC4EyesTestingCredentialTitle.isSelected()) {
+                cbxIC4EyesTestingCredentialList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesTestingCredentialList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }else if (actionTitleCheckbox.equals(cbxIC4EyesTestingLanguageTitle)) {
+            if (cbxIC4EyesTestingLanguageTitle.isSelected()) {
+                cbxIC4EyesTestingLanguageList.forEach(checkBox -> checkBox.setSelected(true));
+            } else {
+                cbxIC4EyesTestingLanguageList.forEach(checkBox -> checkBox.setSelected(false));
+            }
+        }
     }
 }
