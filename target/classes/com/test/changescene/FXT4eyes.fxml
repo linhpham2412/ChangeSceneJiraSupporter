@@ -33,47 +33,47 @@
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </padding>
                                                                <children>
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Build Information" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesBuildInformationTitle" styleClass="CheckBox" text="Build Information" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="50.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="50.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="67.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="67.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="118.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="118.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="135.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="135.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
-                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="16.0" layoutY="33.0" mnemonicParsing="false" fx:id="cbxFXT4EyesBuildInformation10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font></CheckBox>
@@ -81,7 +81,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="10.0" layoutY="10.0" prefHeight="285.0" prefWidth="200.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Server Name" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesServerNameTitle" styleClass="CheckBox" text="Server Name" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -89,7 +89,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesServerName1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -97,7 +97,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -105,7 +105,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -113,7 +113,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -121,7 +121,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -129,7 +129,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -137,7 +137,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -145,7 +145,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -153,7 +153,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -161,7 +161,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesServerName10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -179,7 +179,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="260.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="SDK Name" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesSDKNameTitle" styleClass="CheckBox" text="SDK Name" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -187,7 +187,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -195,7 +195,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -203,7 +203,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -211,7 +211,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -219,7 +219,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -227,7 +227,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -235,7 +235,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -243,7 +243,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -251,7 +251,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -259,7 +259,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSDKName10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -274,7 +274,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="510.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="SLOT Name" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesSLOTNameTitle" styleClass="CheckBox" text="SLOT Name" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -282,7 +282,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -290,7 +290,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -298,7 +298,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -306,7 +306,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -314,7 +314,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -322,7 +322,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -330,7 +330,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -338,7 +338,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -346,7 +346,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -354,7 +354,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesSLOTName10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -369,7 +369,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="760.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Internal SLOT" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesInternalSLOTTitle" styleClass="CheckBox" text="Internal SLOT" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -377,7 +377,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -385,7 +385,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -393,7 +393,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -401,7 +401,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -409,7 +409,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -417,7 +417,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -425,7 +425,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -433,7 +433,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -441,7 +441,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -449,7 +449,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesInternalSLOT10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -464,7 +464,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="1010.0" layoutY="10.0" prefHeight="285.0" prefWidth="285.0">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="URL Information" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesURLInformationTitle" styleClass="CheckBox" text="URL Information" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -472,7 +472,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -480,7 +480,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -488,7 +488,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -496,7 +496,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -504,7 +504,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -512,7 +512,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -520,7 +520,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -528,7 +528,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -536,7 +536,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -544,7 +544,7 @@
                                                                         <Font size="13.0" />
                                                                      </font>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesURLInformation10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <VBox.margin>
                                                                         <Insets />
                                                                      </VBox.margin>
@@ -575,7 +575,7 @@
                                                          <children>
                                                             <VBox id="darkpanel" prefHeight="285.0" prefWidth="130.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Issue Type" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesIssueTypeTitle" styleClass="CheckBox" text="Issue Type" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -583,7 +583,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -591,7 +591,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -599,7 +599,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -607,7 +607,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -615,7 +615,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -623,7 +623,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -631,7 +631,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -639,7 +639,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -647,7 +647,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -655,7 +655,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueType10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -670,7 +670,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="10.0" layoutY="10.0" prefHeight="285.0" prefWidth="130.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Issue Status" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesIssueStatusTitle" styleClass="CheckBox" text="Issue Status" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -678,7 +678,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -686,7 +686,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -694,7 +694,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -702,7 +702,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -710,7 +710,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -718,7 +718,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -726,7 +726,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -734,7 +734,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -742,7 +742,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -750,7 +750,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesIssueStatus10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -768,7 +768,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="260.0" layoutY="10.0" prefHeight="285.0" prefWidth="355.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Environment" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesEnvironmentTitle" styleClass="CheckBox" text="Environment" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -776,7 +776,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -784,7 +784,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -792,7 +792,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -800,7 +800,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -808,7 +808,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -816,7 +816,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -824,7 +824,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -832,7 +832,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -840,7 +840,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -848,7 +848,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesEnvironment10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -863,7 +863,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="510.0" layoutY="10.0" prefHeight="285.0" prefWidth="200.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Testing Type/Browser" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesTestingTypeAndBrowserTitle" styleClass="CheckBox" text="Testing Type/Browser" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -871,7 +871,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -879,7 +879,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -887,7 +887,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -895,7 +895,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -903,7 +903,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -911,7 +911,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -919,7 +919,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -927,7 +927,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -935,7 +935,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -943,7 +943,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingTypeAndBrowser10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -958,7 +958,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="760.0" layoutY="10.0" prefHeight="285.0" prefWidth="240.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Testing Credential" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesTestingCredentialTitle" styleClass="CheckBox" text="Testing Credential" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -966,7 +966,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -974,7 +974,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -982,7 +982,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -990,7 +990,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -998,7 +998,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1006,7 +1006,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1014,7 +1014,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1022,7 +1022,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1030,7 +1030,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1038,7 +1038,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingCredential10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1053,7 +1053,7 @@
                                                             </VBox>
                                                             <VBox id="darkpanel" layoutX="1010.0" layoutY="10.0" prefHeight="285.0" prefWidth="180.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                                <children>
-                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" styleClass="CheckBox" text="Testing Language" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxFXT4EyesTestingLanguageTitle" styleClass="CheckBox" text="Testing Language" textFill="#cef2fb" onAction="#handleFXT4EyesTitleChecked">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1061,7 +1061,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage1" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1069,7 +1069,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage2" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1077,7 +1077,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage3" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1085,7 +1085,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="62.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage4" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1093,7 +1093,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="36.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage5" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1101,7 +1101,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="88.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage6" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1109,7 +1109,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="114.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage7" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1117,7 +1117,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="140.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage8" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1125,7 +1125,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="192.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage9" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1133,7 +1133,7 @@
                                                                         <Insets />
                                                                      </VBox.margin>
                                                                   </CheckBox>
-                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
+                                                                  <CheckBox layoutX="10.0" layoutY="244.0" mnemonicParsing="false" fx:id="cbxFXT4EyesTestingLanguage10" styleClass="CheckBox" text="CheckBox" textFill="#cef2fb">
                                                                      <font>
                                                                         <Font size="13.0" />
                                                                      </font>
@@ -1230,7 +1230,7 @@
                                  </HBox.margin>
                               </Label>
                               <Separator prefWidth="630.0" visible="false" />
-                              <Label id="headerLabel" alignment="CENTER_RIGHT" layoutX="830.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here" textFill="WHITE">
+                              <Label id="headerLabel" fx:id="txtFXT4EyesYourName" alignment="CENTER_RIGHT" layoutX="830.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
