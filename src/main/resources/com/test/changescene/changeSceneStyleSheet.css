@@ -46,7 +46,6 @@
     -fx-background-insets: 3.5px;
     -fx-scale-x: 1.5;
     -fx-scale-y: 1.5;
-    -fx-translate-x= 15px;
 }
 
 #checkBox:selected .mark {

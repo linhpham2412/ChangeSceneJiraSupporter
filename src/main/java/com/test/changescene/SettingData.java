@@ -1,7 +1,6 @@
 package com.test.changescene;
 
 public class SettingData {
-    private String settingFileName;
     private String userName;
     private String releaseDate;
     private String buildName;
@@ -16,14 +15,6 @@ public class SettingData {
     private String testUser;
     private String language;
     private String browser;
-
-    public String getSettingFileName() {
-        return settingFileName;
-    }
-
-    public void setSettingFileName(String settingFileName) {
-        this.settingFileName = settingFileName;
-    }
 
     public String getUserName() {
         return userName;

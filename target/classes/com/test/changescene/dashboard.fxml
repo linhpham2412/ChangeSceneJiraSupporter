@@ -76,7 +76,7 @@
                                  </HBox.margin>
                               </Label>
                               <Separator prefWidth="500.0" visible="false" />
-                              <Label alignment="CENTER_RIGHT" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here" textFill="WHITE">
+                              <Label fx:id="txtDashBoardYourName" alignment="CENTER_RIGHT" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
