@@ -83,7 +83,7 @@
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </padding>
                                                          <children>
-                                                            <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesBuildInformationTitle" styleClass="CheckBox" text="Build Information" textFill="#cef2fb">
+                                                            <CheckBox layoutX="16.0" layoutY="16.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesBuildInformationTitle" styleClass="CheckBox" text="Build Information" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <font>
                                                                   <Font size="13.0" />
                                                                </font></CheckBox>
@@ -131,7 +131,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="10.0" layoutY="10.0" prefHeight="285.0" prefWidth="200.0">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesServerNameTitle" styleClass="CheckBox" text="Server Name" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesServerNameTitle" styleClass="CheckBox" text="Server Name" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <VBox.margin>
                                                                   <Insets />
                                                                </VBox.margin>
@@ -229,7 +229,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="260.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesSDKNameTitle" styleClass="CheckBox" text="SDK Name" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesSDKNameTitle" styleClass="CheckBox" text="SDK Name" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <VBox.margin>
                                                                   <Insets />
                                                                </VBox.margin>
@@ -324,7 +324,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="510.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesSLOTNameTitle" styleClass="CheckBox" text="SLOT Name" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesSLOTNameTitle" styleClass="CheckBox" text="SLOT Name" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <VBox.margin>
                                                                   <Insets />
                                                                </VBox.margin>
@@ -419,7 +419,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="760.0" layoutY="10.0" prefHeight="285.0" prefWidth="150.0">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesInternalSLOTTitle" styleClass="CheckBox" text="Internal SLOT" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesInternalSLOTTitle" styleClass="CheckBox" text="Internal SLOT" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <VBox.margin>
                                                                   <Insets />
                                                                </VBox.margin>
@@ -514,7 +514,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="1010.0" layoutY="10.0" prefHeight="285.0" prefWidth="285.0">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesURLInformationTitle" styleClass="CheckBox" text="URL Information" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesURLInformationTitle" styleClass="CheckBox" text="URL Information" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <VBox.margin>
                                                                   <Insets />
                                                                </VBox.margin>
@@ -625,7 +625,7 @@
                                                    <children>
                                                       <VBox id="darkpanel" prefHeight="285.0" prefWidth="130.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesIssueTypeTitle" styleClass="CheckBox" text="Issue Type" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesIssueTypeTitle" styleClass="CheckBox" text="Issue Type" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <VBox.margin>
                                                                   <Insets />
                                                                </VBox.margin>
@@ -720,7 +720,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="10.0" layoutY="10.0" prefHeight="285.0" prefWidth="130.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesIssueStatusTitle" styleClass="CheckBox" text="Issue Status" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesIssueStatusTitle" styleClass="CheckBox" text="Issue Status" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <font>
                                                                   <Font size="13.0" />
                                                                </font>
@@ -818,7 +818,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="260.0" layoutY="10.0" prefHeight="285.0" prefWidth="355.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesEnvironmentTitle" styleClass="CheckBox" text="Environment" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesEnvironmentTitle" styleClass="CheckBox" text="Environment" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <font>
                                                                   <Font size="13.0" />
                                                                </font>
@@ -913,7 +913,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="510.0" layoutY="10.0" prefHeight="285.0" prefWidth="200.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesTestingTypeAndBrowserTitle" styleClass="CheckBox" text="Testing Type/Browser" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesTestingTypeAndBrowserTitle" styleClass="CheckBox" text="Testing Type/Browser" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <font>
                                                                   <Font size="13.0" />
                                                                </font>
@@ -1008,7 +1008,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="760.0" layoutY="10.0" prefHeight="285.0" prefWidth="240.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesTestingCredentialTitle" styleClass="CheckBox" text="Testing Credential" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesTestingCredentialTitle" styleClass="CheckBox" text="Testing Credential" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <font>
                                                                   <Font size="13.0" />
                                                                </font>
@@ -1103,7 +1103,7 @@
                                                       </VBox>
                                                       <VBox id="darkpanel" layoutX="1010.0" layoutY="10.0" prefHeight="285.0" prefWidth="180.0" style="-fx-border-color: white; -fx-background-color: #64767A;">
                                                          <children>
-                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesTestingLanguageTitle" styleClass="CheckBox" text="Testing Language" textFill="#cef2fb">
+                                                            <CheckBox mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" fx:id="cbxIC4EyesTestingLanguageTitle" styleClass="CheckBox" text="Testing Language" textFill="#cef2fb" onAction="#handleIC4EyesTitleChecked">
                                                                <font>
                                                                   <Font size="13.0" />
                                                                </font>
