@@ -35,7 +35,7 @@
                                  </HBox.margin>
                               </Label>
                               <Separator layoutX="320.0" layoutY="10.0" prefWidth="70.0" visible="false" />
-                              <Label id="headerLabel" alignment="CENTER_RIGHT" layoutX="830.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here">
+                              <Label id="headerLabel" fx:id="txtTestingScopeYourName" alignment="CENTER_RIGHT" layoutX="830.0" layoutY="15.0" prefWidth="370.0" text="Your Name Here">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>

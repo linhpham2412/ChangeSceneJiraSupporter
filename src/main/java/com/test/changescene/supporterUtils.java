@@ -1,6 +1,13 @@
 package com.test.changescene;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.NodeOrientation;
+import javafx.scene.control.CheckBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,6 +17,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class supporterUtils {
     SettingData setting1Local = new SettingData();
@@ -180,5 +188,27 @@ public class supporterUtils {
     public String getUserName(){
         importSettingsFromFile();
         return setting1Local.getUserName();
+    }
+
+    public List<CheckBox> autoAdd10SelectCheckboxes(VBox containerVBox, String titleName, String prefixCheckBoxName){
+        List<CheckBox> listOfElementCheckBoxesToReturn = new ArrayList<>();
+        CheckBox titleCheckBox = new CheckBox(titleName);
+        titleCheckBox.setId(prefixCheckBoxName+"Title");
+        titleCheckBox.getStylesheets().add(getClass().getResource("changeSceneStyleSheet.css").toExternalForm());
+        titleCheckBox.getStyleClass().add("CheckBox");
+        titleCheckBox.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
+        containerVBox.getChildren().add(titleCheckBox);
+        IntStream.range(0,10).forEach(index -> {
+            CheckBox elementCheckBox = new CheckBox();
+            elementCheckBox.setId(prefixCheckBoxName+index);
+            elementCheckBox.getStyleClass().add("CheckBox");
+            containerVBox.getChildren().add(elementCheckBox);
+            listOfElementCheckBoxesToReturn.add(elementCheckBox);
+        });
+        titleCheckBox.setOnAction(event -> {
+            if (titleCheckBox.isSelected()) listOfElementCheckBoxesToReturn.forEach(checkBox -> checkBox.setSelected(true));
+            else listOfElementCheckBoxesToReturn.forEach(checkBox -> checkBox.setSelected(false));
+        });
+        return listOfElementCheckBoxesToReturn;
     }
 }

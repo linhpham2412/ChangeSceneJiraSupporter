@@ -300,4 +300,8 @@ public class DataSettingsController implements Initializable {
             if (settingTestingTypeAndBrowserTextFields.get(index).getId().equals(actionSettingTextFieldId)) supporterSetting.get(index).setBrowser(actionSettingTextFieldValue);
         });
     }
+
+    public void onYourNameTextChange(KeyEvent keyEvent) {
+        supporterSetting.get(0).setUserName(txtUserName.getText());
+    }
 }

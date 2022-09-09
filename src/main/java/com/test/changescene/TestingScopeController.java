@@ -2,22 +2,28 @@ package com.test.changescene;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class TestingScopeController {
+public class TestingScopeController implements Initializable {
     public Button btnTSMBackToDB;
     public ScrollPane pngScroll;
     public Button btnAddNewHeaderTestingScope;
+    supporterUtils supporterUtilTestingScope = new supporterUtils();
 
     private final TestingScopeContent testingScope = new TestingScopeContent();
+    public Label txtTestingScopeYourName;
 
     public void testingScopeBackToDashBoard(ActionEvent actionEvent) {
         try {
@@ -38,5 +44,10 @@ public class TestingScopeController {
         //get Vbox -> scroll pane
         pngScroll = (ScrollPane) this.btnAddNewHeaderTestingScope.getParent().getParent().getChildrenUnmodifiable().get(1);
         pngScroll.setContent(testingScope.addNewTestingScopeWithData(testingScope.getMaxItemNumber(), "", ""));
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        txtTestingScopeYourName.setText(supporterUtilTestingScope.getUserName());
     }
 }
