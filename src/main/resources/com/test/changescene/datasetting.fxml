@@ -1174,7 +1174,7 @@
                                  </HBox.margin>
                               </DatePicker>
                               <Separator prefWidth="88.0" visible="false" />
-                              <TextField id="textBoxName" fx:id="txtUserName" prefHeight="40.0" prefWidth="380.0" promptText="Your Name Here">
+                              <TextField id="textBoxName" fx:id="txtUserName" onKeyReleased="#onYourNameTextChange" prefHeight="40.0" prefWidth="380.0" promptText="Your Name Here">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
