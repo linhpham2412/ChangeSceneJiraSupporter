@@ -131,11 +131,7 @@
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <TextArea prefHeight="404.0" prefWidth="940.0" styleClass="TextArea" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextArea>
+                                    <TextArea prefHeight="404.0" prefWidth="940.0" style="-fx-font-size: 16;" styleClass="TextArea" wrapText="true"/>
                                  </children>
                               </VBox>
                               <VBox id="lightpanel" prefHeight="428.0" prefWidth="305.0" style="-fx-border-color: #64767A;">
@@ -148,11 +144,7 @@
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <TextArea prefHeight="382.0" prefWidth="303.0" styleClass="TextArea" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextArea>
+                                    <TextArea prefHeight="382.0" prefWidth="303.0" style="-fx-font-size: 16;" styleClass="TextArea" wrapText="true"/>
                                     <HBox>
                                        <children>
                                           <CheckBox id="checkBox" mnemonicParsing="false" prefWidth="170.0" text="with attachment?">
