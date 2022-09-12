@@ -109,7 +109,7 @@ public class supporterUtils {
                             }
                             case 11 -> {
                                 listOfSettingToGetDataFromImport.get(rowIndex).setBrowser(importedLine.substring(previousDelimiterIndex, i).trim());
-                                listOfSettingToGetDataFromImport.get(rowIndex).setUserName(importedLine.substring(i + 1));
+                                listOfSettingToGetDataFromImport.get(rowIndex).setUserName(importedLine.substring(i + 1).trim());
                                 //end of line
                                 previousDelimiterIndex = 0;
                                 columnIndex = 0;
