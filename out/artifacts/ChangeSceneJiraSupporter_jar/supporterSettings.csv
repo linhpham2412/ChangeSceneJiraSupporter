@@ -1,0 +1,11 @@
+BuildName,ServerName,SDK,SLOTName,InternalSLOT,URL,Status,Environment,IssueType,user,Language,Browser,UserName
+ , , , , , ,Passed,localhost,Defect,dev,English,EDGE,Linh Pham
+ , , , , , ,Failed, ,Story,qa, , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 
+ , , , , , , , , , , , , 

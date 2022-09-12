@@ -25,11 +25,7 @@
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <TextArea prefHeight="408.0" prefWidth="940.0" styleClass="TextArea" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextArea>
+                                    <TextArea prefHeight="408.0" prefWidth="940.0" styleClass="TextArea" wrapText="true" style="-fx-font-size: 16;"/>
                                  </children>
                               </VBox>
                               <VBox id="lightpanel" prefHeight="394.0" prefWidth="305.0" style="-fx-border-color: #64767A;">
@@ -42,11 +38,7 @@
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <TextArea prefHeight="377.0" prefWidth="303.0" styleClass="TextArea" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </TextArea>
+                                    <TextArea prefHeight="377.0" prefWidth="303.0" styleClass="TextArea" wrapText="true" style="-fx-font-size: 16;"/>
                                     <HBox>
                                        <children>
                                           <CheckBox id="checkBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="170.0" text="with attachment?">
