@@ -1,6 +1,7 @@
 package com.test.changescene;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -9,6 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -18,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class ICFITController implements Initializable {
@@ -47,6 +54,9 @@ public class ICFITController implements Initializable {
     public VBox vboxICFITTestingTypeAndBrowser;
     public VBox vboxICFITTestingCredential;
     public VBox vboxICFITTestingLanguage;
+    public TextArea txaICFITTestingBehavior;
+    public CheckBox cbxICFITWithAttachment;
+    public TextArea txaICFITTestVersion;
     supporterUtils supporterUtilICFIT = new supporterUtils();
     List<SettingData> supporterSettingsICFITList = new ArrayList<>();
     SettingData setting1ICFIT = new SettingData();
@@ -59,6 +69,14 @@ public class ICFITController implements Initializable {
     SettingData setting8ICFIT = new SettingData();
     SettingData setting9ICFIT = new SettingData();
     SettingData setting10ICFIT = new SettingData();
+    final Clipboard clipboard = Clipboard.getSystemClipboard();
+    final ClipboardContent content = new ClipboardContent();
+    AtomicBoolean listModeICFITTestBehavior = new AtomicBoolean(false);
+    AtomicBoolean numericModeICFITTestBehavior = new AtomicBoolean(false);
+    AtomicInteger numericIndexICFITTestBehavior = new AtomicInteger(1);
+    AtomicBoolean listModeICFITTestVersion = new AtomicBoolean(false);
+    AtomicBoolean numericModeICFITTestVersion = new AtomicBoolean(false);
+    AtomicInteger numericIndexICFITTestVersion = new AtomicInteger(1);
 
     public void handelICFITCommentBackToDB(ActionEvent actionEvent) {
         try {
@@ -105,5 +123,50 @@ public class ICFITController implements Initializable {
         IntStream.range(0, 10).forEach(index -> cbxICFITTestingTypeAndBrowserList.get(index).setText(supporterSettingsICFITList.get(index).getBrowser()));
         IntStream.range(0, 10).forEach(index -> cbxICFITTestingCredentialList.get(index).setText(supporterSettingsICFITList.get(index).getTestUser()));
         IntStream.range(0, 10).forEach(index -> cbxICFITTestingLanguageList.get(index).setText(supporterSettingsICFITList.get(index).getLanguage()));
+    }
+
+    public void handleTextAreaICFITTestingBehaviorKeyReleased(KeyEvent keyEvent) {
+        supporterUtilICFIT.onHandleTextArea(keyEvent,txaICFITTestingBehavior,true, listModeICFITTestBehavior, numericModeICFITTestBehavior, numericIndexICFITTestBehavior);
+    }
+
+    public void handleTextAreaICFITTestVersionKeyReleased(KeyEvent keyEvent) {
+        supporterUtilICFIT.onHandleTextArea(keyEvent,txaICFITTestVersion,true, listModeICFITTestVersion, numericModeICFITTestVersion, numericIndexICFITTestVersion);
+    }
+
+    @FXML
+    void generateAndCopyICFITComment() {
+        StringBuilder fourEyeCommentContent = new StringBuilder();
+        String firstSelectedIssueType = "";
+        String firstSelectedStatus = "";
+        //Only get 1 first selected value for Issue Type and Issue Status
+        for (CheckBox cb : cbxICFITIssueTypeList) {
+            if (cb.isSelected()) {
+                firstSelectedIssueType = cb.getText();
+                break;
+            }
+        }
+        for (CheckBox cb : cbxICFITIssueStatusList) {
+            if (cb.isSelected()) {
+                firstSelectedStatus = cb.getText();
+                break;
+            }
+        }
+        fourEyeCommentContent.append("**").append(firstSelectedIssueType).append("** FIT verified by `").append(txtICFITYourName.getText()).append("` with status **").append(firstSelectedStatus).append("**, FIT Test Version: `").append(txaICFITTestVersion.getText()).append("`").append("\n");
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITBuildInformationList, "Build Information","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITServerNameList,"Server Name","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITSDKNameList,"SDK Name","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITSLOTNameList,"SLOT Name","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITInternalSLOTList,"Internal SLOT","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITURLInformationList,"URL Information","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITEnvironmentList,"Testing Environment","`",""));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITTestingTypeAndBrowserList,"Testing Type/Browser","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITTestingCredentialList,"Testing Credential","`","**"));
+        fourEyeCommentContent.append(supporterUtilICFIT.pickSelectedCheckBoxesAndPrint(cbxICFITTestingLanguageList,"Testing Language","`","**"));
+        fourEyeCommentContent.append("\n").append("`FIT Test Behavior:` ").append("\n");
+        fourEyeCommentContent.append(txaICFITTestingBehavior.getText()).append("\n");
+        if (cbxICFITWithAttachment.isSelected())
+            fourEyeCommentContent.append("\n").append("Please check the attachment for more detail").append("\n");
+        content.putString(String.valueOf(fourEyeCommentContent));
+        clipboard.setContent(content);
     }
 }

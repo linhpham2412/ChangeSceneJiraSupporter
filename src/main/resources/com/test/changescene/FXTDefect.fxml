@@ -164,12 +164,12 @@
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Separator>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="[N]umeric">
+                                          <Button mnemonicParsing="false" styleClass="Button" text="[N]umeric" fx:id="btnFXTDefectNumeric">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="493.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[L]ist">
+                                          <Button layoutX="493.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[L]ist" fx:id="btnFXTDefectList">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
@@ -179,7 +179,7 @@
                                           <Insets bottom="5.0" />
                                        </VBox.margin>
                                     </HBox>
-                                    <TextArea prefHeight="333.0" prefWidth="654.0" wrapText="true" styleClass="TextArea" style="-fx-font-size: 16;"/>
+                                    <TextArea prefHeight="333.0" prefWidth="654.0" wrapText="true" styleClass="TextArea" style="-fx-font-size: 16;" fx:id="txaFXTDefectStepsToReproduce" onKeyReleased="#handleTextAreaFXTDefectStepsToReproduceKeyReleased"/>
                                  </children>
                               </VBox>
                               <VBox id="lightpanel" prefHeight="394.0" prefWidth="305.0">
@@ -197,14 +197,14 @@
                                           <Insets left="5.0" />
                                        </VBox.margin>
                                        <children>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Copy to Clipboard">
+                                          <Button mnemonicParsing="false" styleClass="Button" text="Copy to Clipboard" onAction="#generateAndCopyFXTFITComment">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" />
                                              </HBox.margin>
                                           </Button>
                                        </children>
                                     </HBox>
-                                    <TextArea prefHeight="335.0" prefWidth="301.0" wrapText="true" style="-fx-font-size: 16;" styleClass="TextArea"/>
+                                    <TextArea prefHeight="335.0" prefWidth="301.0" wrapText="true" style="-fx-font-size: 16;" styleClass="TextArea" fx:id="txaFXTDefectNote" onKeyReleased="#handleTextAreaFXTDefectNoteKeyReleased"/>
                                  </children>
                               </VBox>
                               <VBox id="lightpanel" layoutX="666.0" layoutY="10.0" prefHeight="394.0" prefWidth="286.0">
@@ -224,7 +224,7 @@
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <TextArea prefHeight="170.0" prefWidth="283.0" wrapText="true" style="-fx-font-size: 16;" styleClass="TextArea"/>
+                                    <TextArea prefHeight="170.0" prefWidth="283.0" wrapText="true" style="-fx-font-size: 16;" styleClass="TextArea" fx:id="txaFXTDefectExpectedResult" onKeyReleased="#handleTextAreaFXTDefectExpectedResultKeyReleased"/>
                                     <HBox>
                                        <children>
                                           <Label id="headerField" text="Actual Result:">
@@ -237,7 +237,7 @@
                                           <Insets top="5.0" />
                                        </VBox.margin>
                                     </HBox>
-                                    <TextArea layoutX="11.0" layoutY="64.0" prefHeight="170.0" prefWidth="283.0" wrapText="true" style="-fx-font-size: 16;" styleClass="TextArea"/>
+                                    <TextArea layoutX="11.0" layoutY="64.0" prefHeight="170.0" prefWidth="283.0" wrapText="true" style="-fx-font-size: 16;" styleClass="TextArea" fx:id="txaFXTDefectActualResult" onKeyReleased="#handleTextAreaFXTDefectActualResultKeyReleased"/>
                                  </children>
                               </VBox>
                            </children>

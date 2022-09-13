@@ -123,7 +123,7 @@
                                           <Insets bottom="5.0" />
                                        </padding>
                                     </HBox>
-                                    <TextArea prefHeight="700.0" prefWidth="880.0" style="-fx-font-size: 16;" styleClass="TextArea" wrapText="true" />
+                                    <TextArea prefHeight="700.0" prefWidth="880.0" style="-fx-font-size: 16;" styleClass="TextArea" wrapText="true" fx:id="txaTestingScope" onKeyReleased="#handleTextAreaTestingScopeKeyReleased"/>
                                  </children>
                               </VBox>
                               <VBox id="lightpanel" prefHeight="695.0" prefWidth="378.0">

@@ -1,6 +1,7 @@
 package com.test.changescene;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -9,6 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -18,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class FXTFITCommentController implements Initializable {
@@ -47,6 +54,9 @@ public class FXTFITCommentController implements Initializable {
     public VBox vboxFXTFITTestingTypeAndBrowser;
     public VBox vboxFXTFITTestingCredential;
     public VBox vboxFXTFITTestingLanguage;
+    public TextArea txaFXTFITTestVersion;
+    public TextArea txaFXTFITTestingBehavior;
+    public CheckBox cbxFXTFITWithAttachment;
     supporterUtils supporterUtilFXTFIT = new supporterUtils();
     List<SettingData> supporterSettingsFXTFITList = new ArrayList<>();
     SettingData setting1FXTFIT = new SettingData();
@@ -59,6 +69,15 @@ public class FXTFITCommentController implements Initializable {
     SettingData setting8FXTFIT = new SettingData();
     SettingData setting9FXTFIT = new SettingData();
     SettingData setting10FXTFIT = new SettingData();
+    final Clipboard clipboard = Clipboard.getSystemClipboard();
+    final ClipboardContent content = new ClipboardContent();
+    AtomicBoolean listModeFXTFITTestBehavior = new AtomicBoolean(false);
+    AtomicBoolean numericModeFXTFITTestBehavior = new AtomicBoolean(false);
+    AtomicInteger numericIndexFXTFITTestBehavior = new AtomicInteger(1);
+    AtomicBoolean listModeFXTFITTestVersion = new AtomicBoolean(false);
+    AtomicBoolean numericModeFXTFITTestVersion = new AtomicBoolean(false);
+    AtomicInteger numericIndexFXTFITTestVersion = new AtomicInteger(1);
+
 
     public void handelFXTFITCommentBackToDB(ActionEvent actionEvent) {
         try {
@@ -105,5 +124,50 @@ public class FXTFITCommentController implements Initializable {
         IntStream.range(0, 10).forEach(index -> cbxFXTFITTestingTypeAndBrowserList.get(index).setText(supporterSettingsFXTFITList.get(index).getBrowser()));
         IntStream.range(0, 10).forEach(index -> cbxFXTFITTestingCredentialList.get(index).setText(supporterSettingsFXTFITList.get(index).getTestUser()));
         IntStream.range(0, 10).forEach(index -> cbxFXTFITTestingLanguageList.get(index).setText(supporterSettingsFXTFITList.get(index).getLanguage()));
+    }
+
+    public void handleTextAreaFXTFITTestingBehaviorKeyReleased(KeyEvent keyEvent) {
+        supporterUtilFXTFIT.onHandleTextArea(keyEvent,txaFXTFITTestingBehavior,false, listModeFXTFITTestBehavior, numericModeFXTFITTestBehavior, numericIndexFXTFITTestBehavior);
+    }
+
+    public void handleTextAreaFXTFITTestVersionKeyReleased(KeyEvent keyEvent) {
+        supporterUtilFXTFIT.onHandleTextArea(keyEvent,txaFXTFITTestVersion,false, listModeFXTFITTestVersion, numericModeFXTFITTestVersion, numericIndexFXTFITTestVersion);
+    }
+
+    @FXML
+    void generateAndCopyFXTFITComment() {
+        StringBuilder fourEyeCommentContent = new StringBuilder();
+        String firstSelectedIssueType = "";
+        String firstSelectedStatus = "";
+        //Only get 1 first selected value for Issue Type and Issue Status
+        for (CheckBox cb : cbxFXTFITIssueTypeList) {
+            if (cb.isSelected()) {
+                firstSelectedIssueType = cb.getText();
+                break;
+            }
+        }
+        for (CheckBox cb : cbxFXTFITIssueStatusList) {
+            if (cb.isSelected()) {
+                firstSelectedStatus = cb.getText();
+                break;
+            }
+        }
+        fourEyeCommentContent.append("*").append(firstSelectedIssueType).append("* 4eyes verified by +").append(txtFXTFITYourName.getText()).append("+ with status *").append(firstSelectedStatus).append("*, FIT Test Version: +").append(txaFXTFITTestVersion.getText()).append("+").append("\n");
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITBuildInformationList, "Build Information","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITServerNameList,"Server Name","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITSDKNameList,"SDK Name","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITSLOTNameList,"SLOT Name","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITInternalSLOTList,"Internal SLOT","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITURLInformationList,"URL Information","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITEnvironmentList,"Testing Environment","+",""));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITTestingTypeAndBrowserList,"Testing Type/Browser","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITTestingCredentialList,"Testing Credential","+","*"));
+        fourEyeCommentContent.append(supporterUtilFXTFIT.pickSelectedCheckBoxesAndPrint(cbxFXTFITTestingLanguageList,"Testing Language","+","*"));
+        fourEyeCommentContent.append("\n").append("+FIT Test Behavior:+ ").append("\n");
+        fourEyeCommentContent.append(txaFXTFITTestingBehavior.getText()).append("\n");
+        if (cbxFXTFITWithAttachment.isSelected())
+            fourEyeCommentContent.append("\n").append("Please check the attachment for more detail").append("\n");
+        content.putString(String.valueOf(fourEyeCommentContent));
+        clipboard.setContent(content);
     }
 }
