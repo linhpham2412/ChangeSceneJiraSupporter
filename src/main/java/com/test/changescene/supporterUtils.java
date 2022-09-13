@@ -1,7 +1,6 @@
 package com.test.changescene;
 
 import javafx.geometry.NodeOrientation;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.IndexRange;
 import javafx.scene.control.TextArea;
@@ -251,7 +250,7 @@ public class supporterUtils {
         }
     }
 
-    public void onHandleTextArea(KeyEvent keyEvent, TextArea workingTextArea, Boolean isICJiraMode, AtomicBoolean listMode, Button listButton, AtomicBoolean numberMode, Button numberButton, AtomicInteger numericIndex) {
+    public void onHandleTextArea(KeyEvent keyEvent, TextArea workingTextArea, Boolean isICJiraMode, AtomicBoolean listMode, AtomicBoolean numberMode, AtomicInteger numericIndex) {
         if (keyEvent.getEventType().equals(KeyEvent.KEY_RELEASED)) {
             if (keyEvent.getCode().equals(KeyCode.SPACE)) {
                 String currentText = workingTextArea.getText();
@@ -259,24 +258,20 @@ public class supporterUtils {
                 try {
                     if (currentText.startsWith("\n* ", selected.getStart() - 3)) {
                         listMode.set(true);
-                        if (listButton != null) listButton.setDefaultButton(listMode.get());
                         workingTextArea.positionCaret(selected.getStart());
                     } else if (currentText.startsWith("* ", selected.getStart() - 2) && !currentText.substring(selected.getStart() - 3, selected.getStart()).matches("[\\w\\d][*]\\s") && !currentText.substring(selected.getStart() - 3, selected.getStart()).matches("[*]{2}\\s")) {
                         listMode.set(true);
-                        if (listButton != null) listButton.setDefaultButton(listMode.get());
                         workingTextArea.positionCaret(selected.getStart());
                     }
                 } catch (Exception e) {
                     if (currentText.startsWith("* ", selected.getStart() - 2)) {
                         listMode.set(true);
-                        if (listButton != null) listButton.setDefaultButton(listMode.get());
                         workingTextArea.positionCaret(selected.getStart());
                     }
                 }
                 if (currentText.startsWith("1. ", selected.getStart() - 3)) {
                     numberMode.set(true);
                     numericIndex.set(1);
-                    if (numberButton != null) numberButton.setDefaultButton(numberMode.get());
                     workingTextArea.positionCaret(selected.getStart());
                 }
             }
@@ -286,7 +281,6 @@ public class supporterUtils {
                 if (listMode.get()) {
                     if (currentText.startsWith("* ", selected.getStart() - 3)) {
                         listMode.set(false);
-                        if (listButton != null) listButton.setDefaultButton(listMode.get());
                         workingTextArea.setText(currentText.substring(0, selected.getStart() - 3) + currentText.substring(selected.getStart() - 1));
                         workingTextArea.positionCaret(selected.getStart() - 2);
                     } else {
@@ -297,7 +291,6 @@ public class supporterUtils {
                 if (numberMode.get()) {
                     if (currentText.substring(selected.getStart() - 4, selected.getStart() - 1).matches("\\d.\\s")) {
                         numberMode.set(false);
-                        if (numberButton != null) numberButton.setDefaultButton(numberMode.get());
                         workingTextArea.setText(currentText.substring(0, selected.getStart() - (numericIndex + ". ").length() - 1) + currentText.substring(selected.getStart() - 1));
                         workingTextArea.positionCaret(selected.getStart() - (numericIndex + ". ").length());
                         numericIndex.set(1);
@@ -308,21 +301,29 @@ public class supporterUtils {
                     }
                 }
             }
+
             if (keyEvent.getCode() == KeyCode.DIGIT1 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, "**Given** ");
+                if (isICJiraMode) customTextAddMethod(workingTextArea, "**Given** ");
+                else customTextAddMethod(workingTextArea, "*Given* ");
             else if (keyEvent.getCode() == KeyCode.DIGIT2 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, "**When** ");
+                if (isICJiraMode) customTextAddMethod(workingTextArea, "**When** ");
+                else customTextAddMethod(workingTextArea, "*When* ");
             else if (keyEvent.getCode() == KeyCode.DIGIT3 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, "**Then** ");
+                if (isICJiraMode) customTextAddMethod(workingTextArea, "**Then** ");
+                else customTextAddMethod(workingTextArea, "*Then* ");
             else if (keyEvent.getCode() == KeyCode.DIGIT4 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, "****And** ");
+                if (isICJiraMode) customTextAddMethod(workingTextArea, "****And** ");
+                else customTextAddMethod(workingTextArea, "**And* ");
             else if (keyEvent.getCode() == KeyCode.B && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "**", "*");
                 else markdownTextInTextArea(workingTextArea, "*", null);
             } else if (keyEvent.getCode() == KeyCode.I && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "_", null);
+                else markdownTextInTextArea(workingTextArea, "*", null);
             } else if (keyEvent.getCode() == KeyCode.H && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "`", null);
+            } else if (keyEvent.getCode() == KeyCode.U && keyEvent.isControlDown()) {
+                if (!isICJiraMode) markdownTextInTextArea(workingTextArea, "+", null);
             }
         }
     }
@@ -340,7 +341,8 @@ public class supporterUtils {
         workingTextArea.positionCaret(selected.getStart() + addText.length());
     }
 
-    public String pickSelectedCheckBoxesAndPrint(List<CheckBox> checkingCheckBoxList, String titleText, String markdownTitleText, String markdownContentList) {
+    public String pickSelectedCheckBoxesAndPrint(List<CheckBox> checkingCheckBoxList, String
+            titleText, String markdownTitleText, String markdownContentList) {
         StringBuilder sb = new StringBuilder();
         AtomicBoolean isCheckingCheckBoxHasAnyCheckedValue = new AtomicBoolean(false);
         checkingCheckBoxList.forEach(checkBox -> {
@@ -352,7 +354,7 @@ public class supporterUtils {
                 if (checkBox.isSelected())
                     sb.append(markdownContentList).append(checkBox.getText()).append(markdownContentList).append(", ");
             });
-            sb.deleteCharAt(sb.length()-2);
+            sb.deleteCharAt(sb.length() - 2);
             sb.append("\n");
         }
         return String.valueOf(sb);

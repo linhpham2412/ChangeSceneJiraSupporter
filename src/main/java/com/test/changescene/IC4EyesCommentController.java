@@ -28,6 +28,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class IC4EyesCommentController implements Initializable {
+    final Clipboard clipboard = Clipboard.getSystemClipboard();
+    final ClipboardContent content = new ClipboardContent();
     public Button btnIC4eyesBackToDB;
     public Label txtIC4EyesYourName;
     public List<CheckBox> cbxIC4EyesBuildInformationList = new ArrayList<>();
@@ -54,7 +56,7 @@ public class IC4EyesCommentController implements Initializable {
     public VBox vboxIC4EyesTestingTypeAndBrowser;
     public VBox vboxIC4EyesTestingCredential;
     public VBox vboxIC4EyesTestingLanguage;
-    public TextArea txaIC4EyesFITTestingBehavior;
+    public TextArea txaIC4EyesTestingBehavior;
     public TextArea txaIC4EyesDeveloperName;
     public CheckBox cbxIC4EyesWithAttachment;
     supporterUtils supporterUtilIC4Eyes = new supporterUtils();
@@ -69,11 +71,12 @@ public class IC4EyesCommentController implements Initializable {
     SettingData setting8IC4eyes = new SettingData();
     SettingData setting9IC4eyes = new SettingData();
     SettingData setting10IC4eyes = new SettingData();
-    AtomicBoolean listModeIC4eyes = new AtomicBoolean(false);
-    AtomicBoolean numericModeIC4eyes = new AtomicBoolean(false);
-    AtomicInteger numericIndexIC4eyes = new AtomicInteger(1);
-    final Clipboard clipboard = Clipboard.getSystemClipboard();
-    final ClipboardContent content = new ClipboardContent();
+    AtomicBoolean listModeIC4eyesTestBehavior = new AtomicBoolean(false);
+    AtomicBoolean numericModeIC4eyesTestBehavior = new AtomicBoolean(false);
+    AtomicInteger numericIndexIC4eyesTestBehavior = new AtomicInteger(1);
+    AtomicBoolean listModeIC4eyesDeveloperName = new AtomicBoolean(false);
+    AtomicBoolean numericModeIC4eyesDeveloperName = new AtomicBoolean(false);
+    AtomicInteger numericIndexIC4eyesDeveloperName = new AtomicInteger(1);
 
     public void handelbtnIC4eyesBackToDB(ActionEvent actionEvent) {
         try {
@@ -123,9 +126,12 @@ public class IC4EyesCommentController implements Initializable {
     }
 
 
-    public void handleTextAreaKeyReleased(KeyEvent keyEvent) {
-        TextArea eventTextArea = (TextArea) keyEvent.getSource();
-        supporterUtilIC4Eyes.onHandleTextArea(keyEvent,eventTextArea,true,listModeIC4eyes,null,numericModeIC4eyes,null,numericIndexIC4eyes);
+    public void handleTextAreaIC4EyesTestingBehaviorKeyReleased(KeyEvent keyEvent) {
+        supporterUtilIC4Eyes.onHandleTextArea(keyEvent, txaIC4EyesTestingBehavior, true, listModeIC4eyesTestBehavior, numericModeIC4eyesTestBehavior, numericIndexIC4eyesTestBehavior);
+    }
+
+    public void handleTextAreaIC4EyesDeveloperNameKeyReleased(KeyEvent keyEvent) {
+        supporterUtilIC4Eyes.onHandleTextArea(keyEvent, txaIC4EyesDeveloperName, true, listModeIC4eyesDeveloperName, numericModeIC4eyesDeveloperName, numericIndexIC4eyesDeveloperName);
     }
 
     @FXML
@@ -147,18 +153,18 @@ public class IC4EyesCommentController implements Initializable {
             }
         }
         fourEyeCommentContent.append("**").append(firstSelectedIssueType).append("** 4eyes verified by `").append(txtIC4EyesYourName.getText()).append("` with status **").append(firstSelectedStatus).append("**, Developer Name: `").append(txaIC4EyesDeveloperName.getText()).append("`").append("\n");
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesBuildInformationList, "Build Information","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesServerNameList,"Server Name","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesSDKNameList,"SDK Name","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesSLOTNameList,"SLOT Name","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesInternalSLOTList,"Internal SLOT","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesURLInformationList,"URL Information","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesEnvironmentList,"Testing Environment","`",""));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesTestingTypeAndBrowserList,"Testing Type/Browser","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesTestingCredentialList,"Testing Credential","`","**"));
-        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesTestingLanguageList,"Testing Language","`","**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesBuildInformationList, "Build Information", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesServerNameList, "Server Name", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesSDKNameList, "SDK Name", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesSLOTNameList, "SLOT Name", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesInternalSLOTList, "Internal SLOT", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesURLInformationList, "URL Information", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesEnvironmentList, "Testing Environment", "`", ""));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesTestingTypeAndBrowserList, "Testing Type/Browser", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesTestingCredentialList, "Testing Credential", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilIC4Eyes.pickSelectedCheckBoxesAndPrint(cbxIC4EyesTestingLanguageList, "Testing Language", "`", "**"));
         fourEyeCommentContent.append("\n").append("`4Eyes Test Behavior:` ").append("\n");
-        fourEyeCommentContent.append(txaIC4EyesFITTestingBehavior.getText()).append("\n");
+        fourEyeCommentContent.append(txaIC4EyesTestingBehavior.getText()).append("\n");
         if (cbxIC4EyesWithAttachment.isSelected())
             fourEyeCommentContent.append("\n").append("Please check the attachment for more detail").append("\n");
         content.putString(String.valueOf(fourEyeCommentContent));

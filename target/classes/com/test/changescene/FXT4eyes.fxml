@@ -126,12 +126,12 @@
                            <children>
                               <VBox id="lightpanel" prefHeight="394.0" prefWidth="942.0" style="-fx-border-color: #64767A;">
                                  <children>
-                                    <Label id="headerField" text="FIT testing behavior:">
+                                    <Label id="headerField" text="4Eyes testing behavior:">
                                        <padding>
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <TextArea prefHeight="408.0" prefWidth="940.0" styleClass="TextArea" wrapText="true" style="-fx-font-size: 16;"/>
+                                    <TextArea fx:id="txaFXT4EyesTestingBehavior" prefHeight="408.0" prefWidth="940.0" styleClass="TextArea" wrapText="true" style="-fx-font-size: 16;" onKeyReleased="#handleTextAreaFXT4EyesTestingBehaviorKeyReleased"/>
                                  </children>
                               </VBox>
                               <VBox id="lightpanel" prefHeight="394.0" prefWidth="305.0" style="-fx-border-color: #64767A;">
@@ -139,15 +139,15 @@
                                     <Insets left="3.0" />
                                  </HBox.margin>
                                  <children>
-                                    <Label id="headerField" text="Developer Name:">
+                                    <Label id="headerField" text="Developer Name:" fx:id="txtFXT4EyesDeveloperName">
                                        <padding>
                                           <Insets left="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <TextArea prefHeight="377.0" prefWidth="303.0" styleClass="TextArea" wrapText="true" style="-fx-font-size: 16;"/>
+                                    <TextArea prefHeight="377.0" prefWidth="303.0" styleClass="TextArea" wrapText="true" style="-fx-font-size: 16;" fx:id="txaFXT4EyesDeveloperName" onKeyReleased="#handleTextAreaFXT4EyesDeveloperNameKeyReleased"/>
                                     <HBox>
                                        <children>
-                                          <CheckBox id="checkBox" mnemonicParsing="false" prefWidth="170.0" text="with attachment?">
+                                          <CheckBox id="checkBox" mnemonicParsing="false" prefWidth="170.0" text="with attachment?" fx:id="cbxFXT4EyesWithAttachment">
                                              <HBox.margin>
                                                 <Insets left="5.0" top="9.0" />
                                              </HBox.margin>
@@ -156,7 +156,7 @@
                                              </font>
                                           </CheckBox>
                                           <Separator prefWidth="41.0" visible="false" />
-                                          <Button mnemonicParsing="false" prefWidth="150.0" styleClass="Button" text="Copy to Clipboard">
+                                          <Button mnemonicParsing="false" prefWidth="150.0" styleClass="Button" text="Copy to Clipboard" onAction="#generateAndCopyFXT4EyeComment">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin></Button>

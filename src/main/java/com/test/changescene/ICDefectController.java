@@ -1,6 +1,7 @@
 package com.test.changescene;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -9,6 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -18,9 +23,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class ICDefectController implements Initializable {
+    final Clipboard clipboard = Clipboard.getSystemClipboard();
+    final ClipboardContent content = new ClipboardContent();
+    AtomicBoolean listModeICDefectStepsToReproduce = new AtomicBoolean(false);
+    AtomicBoolean numericModeICDefectStepsToReproduce = new AtomicBoolean(false);
+    AtomicInteger numericIndexICDefectStepsToReproduce = new AtomicInteger(1);
+    AtomicBoolean listModeICDefectNote = new AtomicBoolean(false);
+    AtomicBoolean numericModeICDefectNote = new AtomicBoolean(false);
+    AtomicInteger numericIndexICDefectNote = new AtomicInteger(1);
+    AtomicBoolean listModeICDefectExpected = new AtomicBoolean(false);
+    AtomicBoolean numericModeICDefectExpected = new AtomicBoolean(false);
+    AtomicInteger numericIndexICDefectExpected = new AtomicInteger(1);
+    AtomicBoolean listModeICDefectActual = new AtomicBoolean(false);
+    AtomicBoolean numericModeICDefectActual = new AtomicBoolean(false);
+    AtomicInteger numericIndexICDefectActual = new AtomicInteger(1);
     public Button btnICDefectDBReturn;
     public Label txtICDefectYourName;
     public List<CheckBox> cbxICDefectBuildInformationList = new ArrayList<>();
@@ -43,6 +64,12 @@ public class ICDefectController implements Initializable {
     public VBox vboxICDefectTestingTypeAndBrowser;
     public VBox vboxICDefectTestingCredential;
     public VBox vboxICDefectTestingLanguage;
+    public TextArea txaICDefectStepsToReproduce;
+    public TextArea txaICDefectNote;
+    public TextArea txaICDefectExpected;
+    public TextArea txaICDefectActual;
+    public Button btnICDefectNumeric;
+    public Button btnICDefectList;
     supporterUtils supporterUtilICDefect = new supporterUtils();
     List<SettingData> supporterSettingsICDefectList = new ArrayList<>();
     SettingData setting1ICDefect = new SettingData();
@@ -63,7 +90,7 @@ public class ICDefectController implements Initializable {
             Scene dashboard = new Scene(root);
             //This line gets the Stage Information
             //here we get the stage from event action and setting the root element in the scene and display scene with stage object (window) which is retrieved from action event
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(dashboard);
             window.show();
         } catch (IOException ex) {
@@ -97,5 +124,56 @@ public class ICDefectController implements Initializable {
         IntStream.range(0, 10).forEach(index -> cbxICDefectTestingTypeAndBrowserList.get(index).setText(supporterSettingsICDefectList.get(index).getBrowser()));
         IntStream.range(0, 10).forEach(index -> cbxICDefectTestingCredentialList.get(index).setText(supporterSettingsICDefectList.get(index).getTestUser()));
         IntStream.range(0, 10).forEach(index -> cbxICDefectTestingLanguageList.get(index).setText(supporterSettingsICDefectList.get(index).getLanguage()));
+    }
+
+    public void handleTextAreaICDefectStepsToReproduceKeyReleased(KeyEvent keyEvent) {
+        supporterUtilICDefect.onHandleTextArea(keyEvent, txaICDefectStepsToReproduce, true, listModeICDefectStepsToReproduce, numericModeICDefectStepsToReproduce, numericIndexICDefectStepsToReproduce);
+    }
+
+    public void handleTextAreaICDefectNoteKeyReleased(KeyEvent keyEvent) {
+        supporterUtilICDefect.onHandleTextArea(keyEvent, txaICDefectNote, true, listModeICDefectNote, numericModeICDefectNote, numericIndexICDefectNote);
+    }
+
+    public void handleTextAreaICDefectExpectedKeyReleased(KeyEvent keyEvent) {
+        supporterUtilICDefect.onHandleTextArea(keyEvent, txaICDefectExpected, true, listModeICDefectExpected, numericModeICDefectExpected, numericIndexICDefectExpected);
+    }
+
+    public void handleTextAreaICDefectActualKeyReleased(KeyEvent keyEvent) {
+        supporterUtilICDefect.onHandleTextArea(keyEvent, txaICDefectActual, true, listModeICDefectActual, numericModeICDefectActual, numericIndexICDefectActual);
+    }
+
+    @FXML
+    void generateAndCopyICDefectDescription() {
+        StringBuilder fourEyeCommentContent = new StringBuilder();
+        fourEyeCommentContent.append("Defect raised with these detail information as below:").append("\n");
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectBuildInformationList, "Build Information", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectServerNameList, "Server Name", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectSDKNameList, "SDK Name", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectSLOTNameList, "SLOT Name", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectInternalSLOTList, "Internal SLOT", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectURLInformationList, "URL Information", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectEnvironmentList, "Testing Environment", "`", ""));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectTestingTypeAndBrowserList, "Testing Type/Browser", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectTestingCredentialList, "Testing Credential", "`", "**"));
+        fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectTestingLanguageList, "Testing Language", "`", "**"));
+        fourEyeCommentContent.append("\n").append("`Steps to reproduce:` ").append("\n");
+        fourEyeCommentContent.append(txaICDefectStepsToReproduce.getText()).append("\n");
+        if (!txaICDefectNote.getText().isEmpty()) fourEyeCommentContent.append(txaICDefectNote.getText()).append("\n");
+        content.putString(String.valueOf(fourEyeCommentContent));
+        clipboard.setContent(content);
+    }
+
+    @FXML
+    void generateAndCopyICExpectedDescription() {
+        String fourEyeCommentContent = txaICDefectExpected.getText() + "\n";
+        content.putString(String.valueOf(fourEyeCommentContent));
+        clipboard.setContent(content);
+    }
+
+    @FXML
+    void generateAndCopyICActualDescription() {
+        String fourEyeCommentContent = txaICDefectActual.getText() + "\n";
+        content.putString(String.valueOf(fourEyeCommentContent));
+        clipboard.setContent(content);
     }
 }
