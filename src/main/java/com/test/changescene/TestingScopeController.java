@@ -108,4 +108,8 @@ public class TestingScopeController implements Initializable {
     public void onHandleTestingScopeListClick(ActionEvent actionEvent) {
         supporterUtilTestingScope.onChangeMultipleLinesToList(txaTestingScope, listModeTestingScope);
     }
+
+    public void onChangeJiraModeThenSwitchAllMarkdown(ActionEvent actionEvent) {
+        supporterUtilTestingScope.onChangeJiraModeThenSwitchAllMarkdown(txaTestingScope,togglebtnTestingScopeICJira.isSelected());
+    }
 }
