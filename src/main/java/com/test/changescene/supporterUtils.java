@@ -301,19 +301,14 @@ public class supporterUtils {
                     }
                 }
             }
-
             if (keyEvent.getCode() == KeyCode.DIGIT1 && keyEvent.isControlDown())
-                if (isICJiraMode) customTextAddMethod(workingTextArea, "**Given** ");
-                else customTextAddMethod(workingTextArea, "*Given* ");
+                customTextAddMethod(workingTextArea, isICJiraMode,"Given");
             else if (keyEvent.getCode() == KeyCode.DIGIT2 && keyEvent.isControlDown())
-                if (isICJiraMode) customTextAddMethod(workingTextArea, "**When** ");
-                else customTextAddMethod(workingTextArea, "*When* ");
+                customTextAddMethod(workingTextArea, isICJiraMode,"When");
             else if (keyEvent.getCode() == KeyCode.DIGIT3 && keyEvent.isControlDown())
-                if (isICJiraMode) customTextAddMethod(workingTextArea, "**Then** ");
-                else customTextAddMethod(workingTextArea, "*Then* ");
+                customTextAddMethod(workingTextArea, isICJiraMode,"Then");
             else if (keyEvent.getCode() == KeyCode.DIGIT4 && keyEvent.isControlDown())
-                if (isICJiraMode) customTextAddMethod(workingTextArea, "****And** ");
-                else customTextAddMethod(workingTextArea, "**And* ");
+                customTextAddMethod(workingTextArea, isICJiraMode,"  And");
             else if (keyEvent.getCode() == KeyCode.B && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "**", "*");
                 else markdownTextInTextArea(workingTextArea, "*", null);
@@ -324,14 +319,20 @@ public class supporterUtils {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "`", null);
             } else if (keyEvent.getCode() == KeyCode.U && keyEvent.isControlDown()) {
                 if (!isICJiraMode) markdownTextInTextArea(workingTextArea, "+", null);
+            } else if (keyEvent.getCode() == KeyCode.L && keyEvent.isControlDown()) {
+                onChangeMultipleLinesToList(workingTextArea,listMode);
+            } else if (keyEvent.getCode() == KeyCode.N && keyEvent.isControlDown()) {
+                onChangeMultipleLinesToNumeric(workingTextArea,numberMode,numericIndex);
             }
         }
     }
 
-    private void customTextAddMethod(TextArea workingTextArea, String textToAdd) {
+    public void customTextAddMethod(TextArea workingTextArea, Boolean isICJiraMode, String textToAdd) {
         String currentText = workingTextArea.getText();
         IndexRange selected = workingTextArea.getSelection();
-        String addText = textToAdd;
+        String markdownBoldText = "";
+        markdownBoldText = isICJiraMode? "**" : "*";
+        String addText = markdownBoldText + textToAdd + markdownBoldText;
         if (selected.getStart() == selected.getEnd()) {
             workingTextArea.setText(currentText.substring(0, selected.getStart()) + addText + currentText.substring(selected.getStart()));
         } else {
@@ -358,5 +359,82 @@ public class supporterUtils {
             sb.append("\n");
         }
         return String.valueOf(sb);
+    }
+
+    private List<Integer> getListOfSearchTextIndexInText(String searchText, String textContent) {
+        //get all index of headers
+        int indexHeader = 0;
+        int wordLength = 0;
+        String tempsearchText = searchText;
+        List<Integer> indexes = new ArrayList<>();
+        while (indexHeader != -1) {
+            indexHeader = textContent.indexOf(tempsearchText, indexHeader + wordLength);
+            if (indexHeader != -1) {
+                indexes.add(indexHeader);
+            }
+            wordLength = tempsearchText.length();
+        }
+        return indexes;
+    }
+
+    public void onChangeMultipleLinesToList(TextArea workingTextArea, AtomicBoolean listMode) {
+        IndexRange selected = workingTextArea.getSelection();
+        String currentText = workingTextArea.getText();
+        String selectedText = currentText.substring(selected.getStart(), selected.getEnd());
+        String tempChangeText = "";
+        //Check if this block on text is already outlined
+        List<Integer> listCheck = getListOfSearchTextIndexInText("* ", selectedText);
+        if (listCheck.size() > 0) {
+            tempChangeText = selectedText.replaceAll("[*]{2}\\s", "</bold>");
+            tempChangeText = tempChangeText.replaceAll("\\w[*]\\s", "</italic>");
+            tempChangeText = tempChangeText.replaceAll("[*]\\s", "");
+            tempChangeText = tempChangeText.replaceAll("(?:\\<\\/bold\\>)", "** ");
+            tempChangeText = tempChangeText.replaceAll("(?:\\<\\/italic\\>)", "* ");
+            listMode.set(false);
+        } else {
+            //Add list outline
+            listMode.set(true);
+            tempChangeText = "* " + selectedText;
+            tempChangeText = tempChangeText.replaceAll("\\n", "\n* ");
+        }
+        workingTextArea.setText(currentText.substring(0, selected.getStart()) + tempChangeText + currentText.substring(selected.getEnd()));
+        workingTextArea.requestFocus();
+        workingTextArea.positionCaret(selected.getStart() + tempChangeText.length());
+    }
+
+    public void onChangeMultipleLinesToNumeric(TextArea workingTextArea, AtomicBoolean numberListMode, AtomicInteger numericIndexValue) {
+        IndexRange selected = workingTextArea.getSelection();
+        String currentText = workingTextArea.getText();
+        String selectedText = currentText.substring(selected.getStart(), selected.getEnd());
+        String tempChangeText = "";
+        //Check if this block on text is already outlined
+        List<Integer> listCheck = getListOfSearchTextIndexInText("* ", selectedText);
+        if (selectedText.substring(0, 3).matches("\\d.\\s")) {
+            //do remove list outline
+            tempChangeText = selectedText.replaceAll("\\d+.\\s", "");
+            numberListMode.set(false);
+            numericIndexValue.set(1);
+        } else {
+            //Add list outline
+            numberListMode.set(true);
+            numericIndexValue.set(1);
+            List<Integer> enterIndex = getListOfSearchTextIndexInText("\n", selectedText);
+            int loopIndex = 0;
+            do {
+                if (loopIndex == 0) {
+                    tempChangeText = numericIndexValue + ". " + selectedText.substring(0, enterIndex.get(loopIndex) + 1);
+                    numericIndexValue.set(numericIndexValue.get() + 1);
+                } else if (loopIndex < enterIndex.size()) {
+                    tempChangeText += numericIndexValue + ". " + selectedText.substring(enterIndex.get(loopIndex - 1) + 1, enterIndex.get(loopIndex) + 1);
+                    numericIndexValue.set(numericIndexValue.get() + 1);
+                } else {
+                    tempChangeText += numericIndexValue + ". " + selectedText.substring(enterIndex.get(loopIndex - 1) + 1);
+                }
+                loopIndex++;
+            } while (loopIndex <= enterIndex.size());
+        }
+        workingTextArea.setText(currentText.substring(0, selected.getStart()) + tempChangeText + currentText.substring(selected.getEnd()));
+        workingTextArea.requestFocus();
+        workingTextArea.positionCaret(selected.getStart() + tempChangeText.length());
     }
 }
