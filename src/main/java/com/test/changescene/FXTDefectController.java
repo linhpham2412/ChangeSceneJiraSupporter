@@ -165,4 +165,40 @@ public class FXTDefectController implements Initializable {
         content.putString(String.valueOf(fourEyeCommentContent));
         clipboard.setContent(content);
     }
+
+    public void onHandleFXTDefectGivenClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.customTextAddMethod(txaFXTDefectStepsToReproduce, false, "Given");
+    }
+
+    public void onHandleFXTDefectWhenClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.customTextAddMethod(txaFXTDefectStepsToReproduce, false, "When");
+    }
+
+    public void onHandleFXTDefectThenClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.customTextAddMethod(txaFXTDefectStepsToReproduce, false, "Then");
+    }
+
+    public void onHandleFXTDefectAndClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.customTextAddMethod(txaFXTDefectStepsToReproduce, false, "  And");
+    }
+
+    public void onHandleFXTDefectBoldClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.markdownTextInTextArea(txaFXTDefectStepsToReproduce,"*",null);
+    }
+
+    public void onHandleFXTDefectItalicClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.markdownTextInTextArea(txaFXTDefectStepsToReproduce,"_",null);
+    }
+
+    public void onHandleFXTDefectUnderlineClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.markdownTextInTextArea(txaFXTDefectStepsToReproduce,"+",null);
+    }
+
+    public void onHandleFXTDefectNumericClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.onChangeMultipleLinesToNumeric(txaFXTDefectStepsToReproduce,numericModeFXTDefectStepsToReproduce,numericIndexFXTDefectStepsToReproduce);
+    }
+
+    public void onHandleFXTDefectListClick(ActionEvent actionEvent) {
+        supporterUtilFXTDefect.onChangeMultipleLinesToList(txaFXTDefectStepsToReproduce,listModeFXTDefectStepsToReproduce);
+    }
 }

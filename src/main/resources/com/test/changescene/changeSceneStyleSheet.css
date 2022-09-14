@@ -32,6 +32,22 @@
     -fx-font-weight: bold;
 }
 
+#ToggleButton{
+    -fx-background-color: #50A2E6;
+    -fx-text-fill: #cef2fb;
+    -fx-font-size: 13px;
+    -fx-font-family: System;
+    -fx-font-weight: bold;
+}
+
+#ToggleButton:selected{
+    -fx-background-color: #494DF2;
+    -fx-text-fill: #cef2fb;
+    -fx-font-size: 13px;
+    -fx-font-family: System;
+    -fx-font-weight: bold;
+}
+
 #checkBox .box{
     -fx-background-color: white;
     -fx-text-fill: black;

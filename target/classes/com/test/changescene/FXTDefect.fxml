@@ -119,42 +119,22 @@
                                     </Label>
                                     <HBox prefHeight="32.0" prefWidth="584.0">
                                        <children>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Given[1]">
+                                          <Button mnemonicParsing="false" styleClass="Button" text="Given[1]" onAction="#onHandleFXTDefectGivenClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="47.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="When[2]">
+                                          <Button layoutX="47.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="When[2]" onAction="#onHandleFXTDefectWhenClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="47.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Then[3]">
+                                          <Button layoutX="47.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Then[3]" onAction="#onHandleFXTDefectThenClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="109.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="And[4]">
-                                             <HBox.margin>
-                                                <Insets left="3.0" />
-                                             </HBox.margin>
-                                          </Button>
-                                          <Separator orientation="VERTICAL" prefHeight="200.0">
-                                             <HBox.margin>
-                                                <Insets left="3.0" />
-                                             </HBox.margin>
-                                          </Separator>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Bold[B]">
-                                             <HBox.margin>
-                                                <Insets left="3.0" />
-                                             </HBox.margin>
-                                          </Button>
-                                          <Button layoutX="291.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Italic[I]">
-                                             <HBox.margin>
-                                                <Insets left="3.0" />
-                                             </HBox.margin>
-                                          </Button>
-                                          <Button layoutX="347.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Underline[U]">
+                                          <Button layoutX="109.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="And[4]" onAction="#onHandleFXTDefectAndClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
@@ -164,12 +144,32 @@
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Separator>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="[N]umeric" fx:id="btnFXTDefectNumeric">
+                                          <Button mnemonicParsing="false" styleClass="Button" text="Bold[B]" onAction="#onHandleFXTDefectBoldClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="493.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[L]ist" fx:id="btnFXTDefectList">
+                                          <Button layoutX="291.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Italic[I]" onAction="#onHandleFXTDefectItalicClick">
+                                             <HBox.margin>
+                                                <Insets left="3.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="347.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Underline[U]" onAction="#onHandleFXTDefectUnderlineClick">
+                                             <HBox.margin>
+                                                <Insets left="3.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Separator orientation="VERTICAL" prefHeight="200.0">
+                                             <HBox.margin>
+                                                <Insets left="3.0" />
+                                             </HBox.margin>
+                                          </Separator>
+                                          <Button mnemonicParsing="false" styleClass="Button" text="[N]umeric" fx:id="btnFXTDefectNumeric" onAction="#onHandleFXTDefectNumericClick">
+                                             <HBox.margin>
+                                                <Insets left="3.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="493.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[L]ist" fx:id="btnFXTDefectList" onAction="#onHandleFXTDefectListClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>

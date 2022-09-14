@@ -176,4 +176,40 @@ public class ICDefectController implements Initializable {
         content.putString(String.valueOf(fourEyeCommentContent));
         clipboard.setContent(content);
     }
+
+    public void onHandleICDefectGivenClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "Given");
+    }
+
+    public void onHandleICDefectWhenClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "When");
+    }
+
+    public void onHandleICDefectThenClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "Then");
+    }
+
+    public void onHandleICDefectAndClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "  And");
+    }
+
+    public void onHandleICDefectBoldClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce,"*",null);
+    }
+
+    public void onHandleICDefectItalicClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce,"_",null);
+    }
+
+    public void onHandleICDefectHighlightClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce,"`",null);
+    }
+
+    public void onHandleICDefectNumericClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.onChangeMultipleLinesToNumeric(txaICDefectStepsToReproduce,numericModeICDefectStepsToReproduce,numericIndexICDefectStepsToReproduce);
+    }
+
+    public void onHandleICDefectListClick(ActionEvent actionEvent) {
+        supporterUtilICDefect.onChangeMultipleLinesToList(txaICDefectStepsToReproduce,listModeICDefectStepsToReproduce);
+    }
 }
