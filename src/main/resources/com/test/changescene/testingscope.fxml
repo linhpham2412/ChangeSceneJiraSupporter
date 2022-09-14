@@ -153,12 +153,12 @@
                                           <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Copy All" textFill="#cef2fb" />
                                           <HBox id="lightpanel">
                                              <children>
-                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeICJira" mnemonicParsing="false" selected="true" text="ICJira">
+                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeICJira" mnemonicParsing="false" selected="true" text="ICJira" onAction="#onChangeJiraModeThenSwitchAllMarkdown">
                                                    <toggleGroup>
                                                       <ToggleGroup fx:id="JiraSwitchMode" />
                                                    </toggleGroup>
                                                 </ToggleButton>
-                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeFXTJira" mnemonicParsing="false" text="FXTJIra" toggleGroup="$JiraSwitchMode" />
+                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeFXTJira" mnemonicParsing="false" text="FXTJIra" toggleGroup="$JiraSwitchMode" onAction="#onChangeJiraModeThenSwitchAllMarkdown"/>
                                              </children>
                                           </HBox>
                                        </children>

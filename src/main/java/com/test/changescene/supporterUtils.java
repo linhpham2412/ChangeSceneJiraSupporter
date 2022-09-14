@@ -437,4 +437,21 @@ public class supporterUtils {
         workingTextArea.requestFocus();
         workingTextArea.positionCaret(selected.getStart() + tempChangeText.length());
     }
+
+    public void onChangeJiraModeThenSwitchAllMarkdown(TextArea workingTextArea, Boolean isTurningToICJiraMode){
+        String tempChangeText = workingTextArea.getText();
+        if (isTurningToICJiraMode){
+            tempChangeText = tempChangeText.replaceAll("[*]","**");
+            tempChangeText = tempChangeText.replaceAll("[_]","*");
+            tempChangeText = tempChangeText.replaceAll("[+]","`");
+        } else{
+            tempChangeText = tempChangeText.replaceAll("[*]{2}","<bold>");
+            tempChangeText = tempChangeText.replaceAll("[*]", "<italic>");
+            tempChangeText = tempChangeText.replaceAll("[`]","+");
+            tempChangeText = tempChangeText.replaceAll("(?:\\<bold\\>)", "*");
+            tempChangeText = tempChangeText.replaceAll("(?:\\<italic\\>)", "_");
+
+        }
+        workingTextArea.setText(tempChangeText);
+    }
 }
