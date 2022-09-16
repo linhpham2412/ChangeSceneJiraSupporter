@@ -315,7 +315,7 @@ public class supporterUtils {
             } else if (keyEvent.getCode() == KeyCode.I && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "_", null);
                 else markdownTextInTextArea(workingTextArea, "*", null);
-            } else if (keyEvent.getCode() == KeyCode.H && keyEvent.isControlDown()) {
+            } else if (keyEvent.getCode() == KeyCode.G && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "`", null);
             } else if (keyEvent.getCode() == KeyCode.U && keyEvent.isControlDown()) {
                 if (!isICJiraMode) markdownTextInTextArea(workingTextArea, "+", null);
@@ -455,5 +455,26 @@ public class supporterUtils {
 
         }
         workingTextArea.setText(tempChangeText);
+    }
+
+    public String switchMarkDownToICJira(String textToSwitch){
+        textToSwitch = textToSwitch.replaceAll("\\[\s\\][*]","[]");
+        textToSwitch = textToSwitch.replaceAll("[*]{2}","*");
+        textToSwitch = textToSwitch.replaceAll("[*]","**");
+        textToSwitch = textToSwitch.replaceAll("[_]","*");
+        textToSwitch = textToSwitch.replaceAll("[+]","`");
+        textToSwitch = textToSwitch.replaceAll("#!","---");
+        return textToSwitch;
+    }
+
+    public String switchMarkDownToFXTJira(String textToSwitch){
+//        textToSwitch = textToSwitch.replaceAll("[*]{2}","<bold>");
+//        textToSwitch = textToSwitch.replaceAll("[*]", "<italic>");
+        textToSwitch = textToSwitch.replaceAll("[`]","+");
+//        textToSwitch = textToSwitch.replaceAll("(?:\\<bold\\>)", "*");
+//        textToSwitch = textToSwitch.replaceAll("(?:\\<italic\\>)", "_");
+        textToSwitch = textToSwitch.replaceAll("\\[\\]","[ ]*");
+        textToSwitch = textToSwitch.replaceAll("---","#!");
+        return textToSwitch;
     }
 }

@@ -83,7 +83,7 @@
                                                 <Insets left="3.0" />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="347.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Highligh[H]" onAction="#onHandleICDefectHighlightClick">
+                                          <Button layoutX="347.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Highligh[G]" onAction="#onHandleICDefectHighlightClick">
                                              <HBox.margin>
                                                 <Insets left="3.0" />
                                              </HBox.margin>
