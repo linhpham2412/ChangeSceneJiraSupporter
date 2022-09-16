@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,26 +33,33 @@ public class DashboardController implements Initializable {
     @FXML
     private void handleDataSettingsMoving(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("datasetting.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootDataSetting = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("datasetting.fxml")));
+            Scene sceneDataSetting = new Scene(rootDataSetting);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage windowDataSetting =(Stage)((Node)event.getSource()).getScene().getWindow();
+            Stage windowDataSetting = new Stage();
+            windowDataSetting.setTitle("Data Setting");
+            windowDataSetting.setScene(sceneDataSetting);
+            windowDataSetting.initModality(Modality.NONE);
+            windowDataSetting.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+
     @FXML
     private void handleTestingScopeManagementMoving(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("testingscope.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootTestingScope = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("testingscope.fxml")));
+            Scene sceneTestingScope = new Scene(rootTestingScope);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Stage windowTestingScope = new Stage();
+            windowTestingScope.setTitle("Testing Scope Management");
+            windowTestingScope.setScene(sceneTestingScope);
+            windowTestingScope.initModality(Modality.NONE);
+            windowTestingScope.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -59,12 +67,14 @@ public class DashboardController implements Initializable {
 
     public void handleICDefect(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ICDefect.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootICDefect = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ICDefect.fxml")));
+            Scene sceneICDefect = new Scene(rootICDefect);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage windowICDefect = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage windowICDefect = new Stage();
+            windowICDefect.setTitle("IC Defect Create");
+            windowICDefect.setScene(sceneICDefect);
+            windowICDefect.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -72,12 +82,14 @@ public class DashboardController implements Initializable {
 
     public void handleDBFXTDefectDescription(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXTDefect.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootFXTDefectDescription = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXTDefect.fxml")));
+            Scene dashboardFXTDefectDescription = new Scene(rootFXTDefectDescription);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage windowFXTDefectDescription = new Stage();
+            windowFXTDefectDescription.setTitle("FXT Defect Create");
+            windowFXTDefectDescription.setScene(dashboardFXTDefectDescription);
+            windowFXTDefectDescription.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -85,12 +97,14 @@ public class DashboardController implements Initializable {
 
     public void handelICFITComment(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FITComment.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootICFITComment = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FITComment.fxml")));
+            Scene dashboardICFITComment = new Scene(rootICFITComment);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage windowICFITComment = new Stage();
+            windowICFITComment.setTitle("IC FIT Comment");
+            windowICFITComment.setScene(dashboardICFITComment);
+            windowICFITComment.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -98,12 +112,14 @@ public class DashboardController implements Initializable {
 
     public void handelFXTFITComment(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXTFITComment.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootFXTFITComment = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXTFITComment.fxml")));
+            Scene dashboardFXTFITComment = new Scene(rootFXTFITComment);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage windowFXTFITComment = new Stage();
+            windowFXTFITComment.setTitle("FXT FIT Comment");
+            windowFXTFITComment.setScene(dashboardFXTFITComment);
+            windowFXTFITComment.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -111,12 +127,14 @@ public class DashboardController implements Initializable {
 
     public void handelDBIC4EyesComment(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("4eyes.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootIC4EyesComment = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("4eyes.fxml")));
+            Scene dashboardIC4EyesComment = new Scene(rootIC4EyesComment);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage windowIC4EyesComment = new Stage();
+            windowIC4EyesComment.setTitle("IC 4Eyes Comment");
+            windowIC4EyesComment.setScene(dashboardIC4EyesComment);
+            windowIC4EyesComment.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -124,12 +142,14 @@ public class DashboardController implements Initializable {
 
     public void handelDBFXT4EeyesComment(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXT4eyes.fxml")));
-            Scene dashboard=new Scene(root);
+            Parent rootFXT4EeyesComment = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FXT4eyes.fxml")));
+            Scene dashboardFXT4EeyesComment = new Scene(rootFXT4EeyesComment);
             //This line gets the Stage Information
-            Stage window=(Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(dashboard);
-            window.show();
+//            Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage windowFXT4EeyesComment = new Stage();
+            windowFXT4EeyesComment.setTitle("FXT 4Eyes Comment");
+            windowFXT4EeyesComment.setScene(dashboardFXT4EeyesComment);
+            windowFXT4EeyesComment.show();
         } catch (IOException ex) {
 //            System.Logger.getLogger(DataSettingsController.class.getName()).log(Level.SEVERE, null, ex);
         }
