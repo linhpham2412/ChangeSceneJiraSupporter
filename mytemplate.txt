@@ -1,0 +1,27 @@
+#! **Functional**
+[ ]* Verify that user can CRUD configuration **Sectors** in system DB
+[ ]* Verify that when user can see list of Sectors defined in configuration will display correctly in Advice your Client - Investment Preferences page
+[ ]* Verify that when user can see list of Sectors defined in configuration will display correctly in Attribute restriction page
+[ ]* abc
+<EndSection>
+#! **Performance Sanity Test**
+[ ]* Verify all pages should open within 1.5 seconds
+[ ]* Verify all request call must not take longer than 200ms
+[ ]* Verify there should not have any request with same purpose calling more than 1 time
+<EndSection>
+#! **Error Message**
+[ ]* Verify if error message display for all required fields
+[ ]* Verify that error message display right below the error field
+[ ]* Verify page can not be submitted if mandatory fields are not fully filled
+[ ]* Verify page can be submitted if optional fields are filled or not filled
+<EndSection>
+#! **Browser's Compatibility**
+[ ]* Story should be test with Chrome latest version
+<EndSection>
+#! **UI/UX Testing**
+[ ]* Responsive testing on 1280x800 and 1024x768
+<EndSection>
+#! **Translation Test**
+[ ]* Verify all Frontend labels and form labels are display as key when change to other languages
+[ ]* Verify keywords and data from BE should be display with translated data from BE
+<EndSection>
