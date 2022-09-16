@@ -1,6 +1,7 @@
 package com.test.changescene;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,12 +9,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.input.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -30,6 +32,8 @@ public class TestingScopeController implements Initializable {
     public Label txtTestingScopeYourName;
     public Button btnTestScopeLoadTemplate;
     public Label txtTestScopeFileName;
+    public Button cbxTestScopeCopyFromSelected;
+    public Button cbxTestScopeCopyAll;
     FileChooser fileChooser = new FileChooser();
     private File templateFile = null;
     String currentPath = null;
@@ -37,8 +41,8 @@ public class TestingScopeController implements Initializable {
     AtomicBoolean listModeTestingScope = new AtomicBoolean(false);
     AtomicBoolean numericModeTestingScope = new AtomicBoolean(false);
     AtomicInteger numericIndexTestingScope = new AtomicInteger(1);
-
-
+    final Clipboard clipboard = Clipboard.getSystemClipboard();
+    final ClipboardContent content = new ClipboardContent();
 
     public void testingScopeBackToDashBoard(ActionEvent actionEvent) {
         try {
@@ -73,47 +77,47 @@ public class TestingScopeController implements Initializable {
     }
 
     public void handleTextAreaTestingScopeKeyReleased(KeyEvent keyEvent) {
-        supporterUtilTestingScope.onHandleTextArea(keyEvent, txaTestingScope, true, listModeTestingScope, numericModeTestingScope, numericIndexTestingScope);
+        supporterUtilTestingScope.onHandleTextArea(keyEvent, txaTestingScope, false, listModeTestingScope, numericModeTestingScope, numericIndexTestingScope);
     }
 
     public void onHandleTestingScopeGivenClick(ActionEvent actionEvent) {
-        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, togglebtnTestingScopeICJira.isSelected(), "Given");
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, false, "Given");
     }
 
     public void onHandleTestingScopeWhenClick(ActionEvent actionEvent) {
-        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, togglebtnTestingScopeICJira.isSelected(), "When");
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, false, "When");
     }
 
     public void onHandleTestingScopeThenClick(ActionEvent actionEvent) {
-        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, togglebtnTestingScopeICJira.isSelected(), "Then");
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, false, "Then");
     }
 
     public void onHandleTestingScopeAndClick(ActionEvent actionEvent) {
-        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, togglebtnTestingScopeICJira.isSelected(), "  And");
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, false, "  And");
     }
 
     public void onHandleTestingScopeBoldClick(ActionEvent actionEvent) {
-        if (togglebtnTestingScopeICJira.isSelected()) {
-            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "**", "*");
-        } else {
+//        if (togglebtnTestingScopeICJira.isSelected()) {
+//            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "**", "*");
+//        } else {
             supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "*", null);
-        }
+//        }
     }
 
     public void onHandleTestingScopeItalicClick(ActionEvent actionEvent) {
-        if (togglebtnTestingScopeICJira.isSelected()) {
-            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "*", null);
-        } else {
+//        if (togglebtnTestingScopeICJira.isSelected()) {
+//            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "*", null);
+//        } else {
             supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "_", null);
-        }
+//        }
     }
 
     public void onHandleTestingScopeHighlightClick(ActionEvent actionEvent) {
-        if (togglebtnTestingScopeICJira.isSelected()) {
-            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "`", null);
-        } else {
+//        if (togglebtnTestingScopeICJira.isSelected()) {
+//            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "`", null);
+//        } else {
             supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "+", null);
-        }
+//        }
     }
 
     public void onHandleTestingScopeNumericClick(ActionEvent actionEvent) {
@@ -124,9 +128,9 @@ public class TestingScopeController implements Initializable {
         supporterUtilTestingScope.onChangeMultipleLinesToList(txaTestingScope, listModeTestingScope);
     }
 
-    public void onChangeJiraModeThenSwitchAllMarkdown(ActionEvent actionEvent) {
-        supporterUtilTestingScope.onChangeJiraModeThenSwitchAllMarkdown(txaTestingScope,togglebtnTestingScopeICJira.isSelected());
-    }
+//    public void onChangeJiraModeThenSwitchAllMarkdown(ActionEvent actionEvent) {
+//        supporterUtilTestingScope.onChangeJiraModeThenSwitchAllMarkdown(txaTestingScope,togglebtnTestingScopeICJira.isSelected());
+//    }
 
     @FXML
     void loadTestScopeTemplate() throws IOException {
@@ -163,5 +167,59 @@ public class TestingScopeController implements Initializable {
                 }
             }
         }
+    }
+
+    public void onTCCopySelectedAction(ActionEvent actionEvent) {
+        StringBuilder sb1 = getDataFromTextAreaToArray(true);
+        content.putString(String.valueOf(sb1));
+        clipboard.setContent(content);
+    }
+
+    public void onTCCopyAllAction(ActionEvent actionEvent) {
+        StringBuilder sb1 = getDataFromTextAreaToArray(false);
+        content.putString(String.valueOf(sb1));
+        clipboard.setContent(content);
+    }
+
+    private StringBuilder getDataFromTextAreaToArray(boolean isGetFromSelectedCheckBoxes) {
+        StringBuilder sb = new StringBuilder();
+        HashMap<Integer, CheckBox> availableCheckboxes = testingScope.getCheckBoxList();
+        if (!testingScope.getMaxItemNumber().equals(0)) {
+            try {
+                for (int i = 0; i < availableCheckboxes.size(); i++) {
+                    Event.fireEvent(availableCheckboxes.get(i), new MouseEvent(MouseEvent.MOUSE_CLICKED, availableCheckboxes.get(i).getLayoutX(), availableCheckboxes.get(i).getLayoutY(), availableCheckboxes.get(i).getLayoutX(), availableCheckboxes.get(i).getLayoutY(), MouseButton.PRIMARY, 1, true, true, true, true, true, true, true, true, true, true, null));
+                }
+            } catch (Exception ignored) {
+            }
+            //Save data to testing scope first
+            HashMap<Integer, Integer> textMapping = testingScope.checkAndSetTextAreaFollowOrder(txaTestingScope);
+            testingScope.saveDataWithTextIndexInTextArea(textMapping);
+            //start write content
+            if (isGetFromSelectedCheckBoxes) {
+                for (int i = 0; i < testingScope.getMaxItemNumber(); i++) {
+                    if (availableCheckboxes.get(i).isSelected()) {
+//                        if (togglebtnTestingScopeICJira.isSelected()) {
+//                            sb.append(testingScope.getICHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
+//                        } else {
+                            sb.append(testingScope.getHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
+//                        }
+                    }
+                }
+            } else {
+                for (int i = 0; i < testingScope.getMaxItemNumber(); i++) {
+//                    if (togglebtnTestingScopeICJira.isSelected()) {
+//                        sb.append(testingScope.getICHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
+//                    } else {
+                        sb.append(testingScope.getHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
+//                    }
+                }
+            }
+        }
+        if (togglebtnTestingScopeICJira.isSelected()){
+            sb = new StringBuilder(supporterUtilTestingScope.switchMarkDownToICJira(sb.toString()));
+        }else{
+            sb = new StringBuilder(supporterUtilTestingScope.switchMarkDownToFXTJira(sb.toString()));
+        }
+        return sb;
     }
 }

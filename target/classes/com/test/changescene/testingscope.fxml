@@ -29,7 +29,7 @@
                                  </HBox.margin>
                               </Label>
                               <Separator prefWidth="100.0" visible="false" />
-                              <Label id="headerLabel" alignment="CENTER" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="filename.txt" fx:id="txtTestScopeFileName">
+                              <Label id="headerLabel" fx:id="txtTestScopeFileName" alignment="CENTER" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="filename.txt">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -63,22 +63,22 @@
                                                 <Insets top="5.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Given[1]" textFill="#cef2fb" onAction="#onHandleTestingScopeGivenClick">
+                                          <Button mnemonicParsing="false" onAction="#onHandleTestingScopeGivenClick" styleClass="Button" text="Given[1]" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="When[2]" textFill="#cef2fb" onAction="#onHandleTestingScopeWhenClick">
+                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeWhenClick" styleClass="Button" text="When[2]" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Then[3]" textFill="#cef2fb" onAction="#onHandleTestingScopeThenClick">
+                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeThenClick" styleClass="Button" text="Then[3]" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="And[4]" textFill="#cef2fb" onAction="#onHandleTestingScopeAndClick">
+                                          <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeAndClick" styleClass="Button" text="And[4]" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -88,23 +88,23 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Separator>
-                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[B]old" textFill="#cef2fb" onAction="#onHandleTestingScopeBoldClick">
+                                          <Button layoutX="38.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeBoldClick" styleClass="Button" text="[B]old" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[I]talic" textFill="#cef2fb" onAction="#onHandleTestingScopeItalicClick">
+                                          <Button layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeItalicClick" styleClass="Button" text="[I]talic" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="497.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[H]Highlight" textFill="#cef2fb" onAction="#onHandleTestingScopeHighlightClick"/>
-                                          <Button layoutX="162.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[N]umeric" textFill="#cef2fb" onAction="#onHandleTestingScopeNumericClick">
+                                          <Button layoutX="497.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeHighlightClick" styleClass="Button" text="[G]Highlight" textFill="#cef2fb" />
+                                          <Button layoutX="162.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeNumericClick" styleClass="Button" text="[N]umeric" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="224.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="[L]ist" textFill="#cef2fb" onAction="#onHandleTestingScopeListClick">
+                                          <Button layoutX="224.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeListClick" styleClass="Button" text="[L]ist" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -131,7 +131,7 @@
                                  <children>
                                     <HBox spacing="10.0">
                                        <children>
-                                          <Button mnemonicParsing="false" prefWidth="130.0" styleClass="Button" text="Load Template" textFill="#cef2fb" fx:id="btnTestScopeLoadTemplate" onAction="#loadTestScopeTemplate"/>
+                                          <Button fx:id="btnTestScopeLoadTemplate" mnemonicParsing="false" onAction="#loadTestScopeTemplate" prefWidth="130.0" styleClass="Button" text="Load Template" textFill="#cef2fb" />
                                           <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="125.0" styleClass="Button" text="Save Template" textFill="#cef2fb" />
                                           <Button fx:id="btnAddNewHeaderTestingScope" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#addNewHeaderTestingScope" prefWidth="140.0" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
                                        </children>
@@ -147,18 +147,26 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </ScrollPane>
-                                    <HBox spacing="20.0">
+                                    <HBox spacing="10.0">
                                        <children>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Copy Selected" textFill="#cef2fb" />
-                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Copy All" textFill="#cef2fb" />
+                                          <Button fx:id="cbxTestScopeCopyFromSelected" mnemonicParsing="false" onAction="#onTCCopySelectedAction" styleClass="Button" text="Copy Selected" textFill="#cef2fb" />
+                                          <Button fx:id="cbxTestScopeCopyAll" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onTCCopyAllAction" styleClass="Button" text="Copy All" textFill="#cef2fb" />
+                                          <Label prefHeight="27.0" prefWidth="40.0" text="for =&gt;">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="2.0" />
+                                             </padding>
+                                          </Label>
                                           <HBox id="lightpanel">
                                              <children>
-                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeICJira" mnemonicParsing="false" selected="true" text="ICJira" onAction="#onChangeJiraModeThenSwitchAllMarkdown">
+                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeICJira" mnemonicParsing="false" selected="true" text="ICJira">
                                                    <toggleGroup>
                                                       <ToggleGroup fx:id="JiraSwitchMode" />
                                                    </toggleGroup>
                                                 </ToggleButton>
-                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeFXTJira" mnemonicParsing="false" text="FXTJIra" toggleGroup="$JiraSwitchMode" onAction="#onChangeJiraModeThenSwitchAllMarkdown"/>
+                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeFXTJira" mnemonicParsing="false" text="FXTJIra" toggleGroup="$JiraSwitchMode" />
                                              </children>
                                           </HBox>
                                        </children>
