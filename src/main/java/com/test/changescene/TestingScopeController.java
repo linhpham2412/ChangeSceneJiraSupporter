@@ -1,6 +1,7 @@
 package com.test.changescene;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -8,9 +9,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -26,10 +28,17 @@ public class TestingScopeController implements Initializable {
     public ToggleButton togglebtnTestingScopeICJira;
     public ToggleButton togglebtnTestingScopeFXTJira;
     public Label txtTestingScopeYourName;
+    public Button btnTestScopeLoadTemplate;
+    public Label txtTestScopeFileName;
+    FileChooser fileChooser = new FileChooser();
+    private File templateFile = null;
+    String currentPath = null;
     supporterUtils supporterUtilTestingScope = new supporterUtils();
     AtomicBoolean listModeTestingScope = new AtomicBoolean(false);
     AtomicBoolean numericModeTestingScope = new AtomicBoolean(false);
     AtomicInteger numericIndexTestingScope = new AtomicInteger(1);
+
+
 
     public void testingScopeBackToDashBoard(ActionEvent actionEvent) {
         try {
@@ -54,7 +63,13 @@ public class TestingScopeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        testingScope.getTextArea(txaTestingScope);
         txtTestingScopeYourName.setText(supporterUtilTestingScope.getUserName());
+        try {
+            currentPath = new java.io.File(".").getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void handleTextAreaTestingScopeKeyReleased(KeyEvent keyEvent) {
@@ -111,5 +126,42 @@ public class TestingScopeController implements Initializable {
 
     public void onChangeJiraModeThenSwitchAllMarkdown(ActionEvent actionEvent) {
         supporterUtilTestingScope.onChangeJiraModeThenSwitchAllMarkdown(txaTestingScope,togglebtnTestingScopeICJira.isSelected());
+    }
+
+    @FXML
+    void loadTestScopeTemplate() throws IOException {
+        pngScroll = (ScrollPane) btnAddNewHeaderTestingScope.getParent().getParent().getChildrenUnmodifiable().get(1);
+        fileChooser.setInitialDirectory(new File(currentPath));
+        templateFile = fileChooser.showOpenDialog(null);
+        txtTestScopeFileName.setText(templateFile.getName());
+        testingScope.resetTestingScope();
+        BufferedReader reader = null;
+        Object[] readData = new Object[0];
+        try {
+            reader = new BufferedReader(new FileReader(templateFile));
+            readData = reader.lines().toArray();
+            reader.close();
+        } catch (FileNotFoundException e) {
+            reader.reset();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String header = "";
+        String content = "";
+        int readIndex = 0;
+        if (readData.length > 0) {
+            for (int i = 0; i < readData.length; i++) {
+                if (readData[i].toString().startsWith("#!")) {
+                    header = readData[i].toString();
+                } else if (readData[i].toString().startsWith("[ ]*") || readData[i].toString().startsWith("*") || readData[i].toString().startsWith("") && !readData[i].toString().equals("<EndSection>")) {
+                    content += readData[i].toString() + "\n";
+                } else if (readData[i].toString().equals("<EndSection>")) {
+                    pngScroll.setContent(testingScope.addNewTestingScopeWithData(readIndex, header, content));
+                    readIndex += 1;
+                    header = "";
+                    content = "";
+                }
+            }
+        }
     }
 }

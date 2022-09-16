@@ -29,7 +29,7 @@
                                  </HBox.margin>
                               </Label>
                               <Separator prefWidth="100.0" visible="false" />
-                              <Label id="headerLabel" alignment="CENTER" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="filename.txt">
+                              <Label id="headerLabel" alignment="CENTER" layoutX="60.0" layoutY="15.0" prefWidth="370.0" text="filename.txt" fx:id="txtTestScopeFileName">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -131,7 +131,7 @@
                                  <children>
                                     <HBox spacing="10.0">
                                        <children>
-                                          <Button mnemonicParsing="false" prefWidth="130.0" styleClass="Button" text="Load Template" textFill="#cef2fb" />
+                                          <Button mnemonicParsing="false" prefWidth="130.0" styleClass="Button" text="Load Template" textFill="#cef2fb" fx:id="btnTestScopeLoadTemplate" onAction="#loadTestScopeTemplate"/>
                                           <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="125.0" styleClass="Button" text="Save Template" textFill="#cef2fb" />
                                           <Button fx:id="btnAddNewHeaderTestingScope" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#addNewHeaderTestingScope" prefWidth="140.0" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
                                        </children>

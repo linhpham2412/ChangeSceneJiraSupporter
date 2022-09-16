@@ -4,8 +4,9 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
@@ -34,10 +35,10 @@ public class TestingScopeContent {
     public void setTestingScope(Integer number, String header, String content) {
         testingScopeHeader.put(number, header);
         try {
-            if (content.charAt(content.length()-1) == '\n') testingScopeContent.put(number, content);
-            else testingScopeContent.put(number,content+"\n");
+            if (content.charAt(content.length() - 1) == '\n') testingScopeContent.put(number, content);
+            else testingScopeContent.put(number, content + "\n");
         } catch (Exception e) {
-            testingScopeContent.put(number,content+"\n");
+            testingScopeContent.put(number, content + "\n");
         }
     }
 
@@ -50,8 +51,8 @@ public class TestingScopeContent {
         return testingScopeHeader.get(number);
     }
 
-    public String getICHeaderById(Integer number){
-        return testingScopeHeader.get(number).replaceFirst("#! ","---");
+    public String getICHeaderById(Integer number) {
+        return testingScopeHeader.get(number).replaceFirst("#! ", "---");
     }
 
     public String getTestingScopeContentById(Integer number) {
@@ -142,10 +143,10 @@ public class TestingScopeContent {
         CheckBox tempCheckBox;
         textareaToWriteTestScope.setText("");
         for (int i = 0; i < tcVboxes.size(); i++) {
-            tempHBox = (HBox) tcVboxes.get(i).getChildren().get(0);
+            tempHBox = (HBox) tcVboxes.get(i).getChildren().get(1);
             tempCheckBox = (CheckBox) tempHBox.getChildren().get(1);
             if (tempCheckBox.isSelected()) {
-                String textAreaContent = textareaToWriteTestScope.getText();
+//                String textAreaContent = textareaToWriteTestScope.getText();
                 testingScopeMapToTextArea.put(i, textIndex);
                 textIndex++;
                 textareaToWriteTestScope.setText(textareaToWriteTestScope.getText() + getHeaderById(i) + "\n" + getTestingScopeContentById(i));
@@ -235,7 +236,7 @@ public class TestingScopeContent {
         textField.setDisable(true);
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
             int index = Integer.parseInt(textField.getId().substring(textFieldPrefixName.length()));
-            Label tf = (Label) tcVboxes.get(index).getChildren().get(1);
+            Label tf = (Label) tcVboxes.get(index).getChildren().get(0);
             tf.setText(number + ". Testing scope of " + newValue);
         });
         textField.addEventFilter(MouseEvent.MOUSE_ENTERED, e -> {
@@ -278,7 +279,6 @@ public class TestingScopeContent {
         });
         checkBox.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
             CheckBox cb = (CheckBox) e.getSource();
-            IndexRange selected = textareaTestScope.getSelection();
             String fieldName = e.getSource().toString();
             VBox parentVbox = (VBox) cb.getParent().getParent();
             TextField tf = (TextField) cb.getParent().getChildrenUnmodifiable().get(0);
@@ -299,7 +299,7 @@ public class TestingScopeContent {
                 saveDataWithTextIndexInTextArea(textMapping);
             }
             //change textbox text
-            tf.setText(getShortHeaderById(number));
+            tf.setText(getShortHeaderById(index));
         });
 
         removeSectionButton.setId(buttonPrefixName + number);
@@ -335,8 +335,11 @@ public class TestingScopeContent {
                 removePanel(index);
                 reorderTestScopeFromIndex(index);
                 //add data to textbox
-                saveDataWithTextIndexInTextArea(textMapping);
+//                saveDataWithTextIndexInTextArea(textMapping);
+//                textMapping = checkAndSetTextAreaFollowOrder(textareaTestScope);
                 textMapping = checkAndSetTextAreaFollowOrder(textareaTestScope);
+                saveDataWithTextIndexInTextArea(textMapping);
+
             } catch (Exception ignored) {
             }
         });
@@ -362,7 +365,7 @@ public class TestingScopeContent {
         hbox.getChildren().add(removeSectionButton);
         HBox.setMargin(removeSectionButton, new Insets(7, 5, 5, 5));
         vbox.getChildren().add(label);
-        VBox.setMargin(label, new Insets(0,0,0,3));
+        VBox.setMargin(label, new Insets(0, 0, 0, 3));
         vbox.getChildren().add(hbox);
 
         tcVboxes.put(number, vbox);
