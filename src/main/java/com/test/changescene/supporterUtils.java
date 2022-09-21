@@ -302,13 +302,13 @@ public class supporterUtils {
                 }
             }
             if (keyEvent.getCode() == KeyCode.DIGIT1 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, isICJiraMode,"Given");
+                customTextAddMethod(workingTextArea, isICJiraMode, "Given");
             else if (keyEvent.getCode() == KeyCode.DIGIT2 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, isICJiraMode,"When");
+                customTextAddMethod(workingTextArea, isICJiraMode, "When");
             else if (keyEvent.getCode() == KeyCode.DIGIT3 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, isICJiraMode,"Then");
+                customTextAddMethod(workingTextArea, isICJiraMode, "Then");
             else if (keyEvent.getCode() == KeyCode.DIGIT4 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, isICJiraMode,"  And");
+                customTextAddMethod(workingTextArea, isICJiraMode, "  And");
             else if (keyEvent.getCode() == KeyCode.B && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "**", "*");
                 else markdownTextInTextArea(workingTextArea, "*", null);
@@ -320,9 +320,9 @@ public class supporterUtils {
             } else if (keyEvent.getCode() == KeyCode.U && keyEvent.isControlDown()) {
                 if (!isICJiraMode) markdownTextInTextArea(workingTextArea, "+", null);
             } else if (keyEvent.getCode() == KeyCode.L && keyEvent.isControlDown()) {
-                onChangeMultipleLinesToList(workingTextArea,listMode);
+                onChangeMultipleLinesToList(workingTextArea, listMode);
             } else if (keyEvent.getCode() == KeyCode.N && keyEvent.isControlDown()) {
-                onChangeMultipleLinesToNumeric(workingTextArea,numberMode,numericIndex);
+                onChangeMultipleLinesToNumeric(workingTextArea, numberMode, numericIndex);
             }
         }
     }
@@ -331,7 +331,9 @@ public class supporterUtils {
         String currentText = workingTextArea.getText();
         IndexRange selected = workingTextArea.getSelection();
         String markdownBoldText = "";
-        markdownBoldText = isICJiraMode? "**" : "*";
+        if (isICJiraMode != null) {
+            markdownBoldText = isICJiraMode ? "**" : "*";
+        }
         String addText = markdownBoldText + textToAdd + markdownBoldText;
         if (selected.getStart() == selected.getEnd()) {
             workingTextArea.setText(currentText.substring(0, selected.getStart()) + addText + currentText.substring(selected.getStart()));
@@ -438,16 +440,16 @@ public class supporterUtils {
         workingTextArea.positionCaret(selected.getStart() + tempChangeText.length());
     }
 
-    public void onChangeJiraModeThenSwitchAllMarkdown(TextArea workingTextArea, Boolean isTurningToICJiraMode){
+    public void onChangeJiraModeThenSwitchAllMarkdown(TextArea workingTextArea, Boolean isTurningToICJiraMode) {
         String tempChangeText = workingTextArea.getText();
-        if (isTurningToICJiraMode){
-            tempChangeText = tempChangeText.replaceAll("[*]","**");
-            tempChangeText = tempChangeText.replaceAll("[_]","*");
-            tempChangeText = tempChangeText.replaceAll("[+]","`");
-        } else{
-            tempChangeText = tempChangeText.replaceAll("[*]{2}","<bold>");
+        if (isTurningToICJiraMode) {
+            tempChangeText = tempChangeText.replaceAll("[*]", "**");
+            tempChangeText = tempChangeText.replaceAll("[_]", "*");
+            tempChangeText = tempChangeText.replaceAll("[+]", "`");
+        } else {
+            tempChangeText = tempChangeText.replaceAll("[*]{2}", "<bold>");
             tempChangeText = tempChangeText.replaceAll("[*]", "<italic>");
-            tempChangeText = tempChangeText.replaceAll("[`]","+");
+            tempChangeText = tempChangeText.replaceAll("[`]", "+");
             tempChangeText = tempChangeText.replaceAll("(?:\\<bold\\>)", "*");
             tempChangeText = tempChangeText.replaceAll("(?:\\<italic\\>)", "_");
 

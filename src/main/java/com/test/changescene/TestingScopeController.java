@@ -30,6 +30,7 @@ public class TestingScopeController implements Initializable {
     public Label txtTestingScopeYourName;
     public Button btnTestScopeLoadTemplate;
     public Label txtTestScopeFileName;
+    public Button btnTestScopeAddNewItem;
     FileChooser fileChooser = new FileChooser();
     private File templateFile = null;
     String currentPath = null;
@@ -163,5 +164,9 @@ public class TestingScopeController implements Initializable {
                 }
             }
         }
+    }
+
+    public void onTestScopeAddNewItem(ActionEvent actionEvent) {
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, null, "[]");
     }
 }
