@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.TestingScopeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.TestingScopeController">
    <children>
       <TilePane prefHeight="800.0" prefWidth="1280.0" stylesheets="@changeSceneStyleSheet.css">
          <children>
@@ -98,7 +98,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Button>
-                                          <Button layoutX="497.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeHighlightClick" styleClass="Button" text="[H]Highlight" textFill="#cef2fb" />
+                                          <Button layoutX="497.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeHighlightClick" styleClass="Button" text="[G]Highlight" textFill="#cef2fb" />
                                           <Button layoutX="162.0" layoutY="10.0" mnemonicParsing="false" onAction="#onHandleTestingScopeNumericClick" styleClass="Button" text="[N]umeric" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
@@ -114,7 +114,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Separator>
-                                          <Button fx:id="btnTestScopeAddNewItem" layoutX="478.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb" onAction="#onTestScopeAddNewItem">
+                                          <Button layoutX="478.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -147,18 +147,26 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </ScrollPane>
-                                    <HBox spacing="20.0">
+                                    <HBox spacing="10.0">
                                        <children>
-                                          <Button mnemonicParsing="false" styleClass="Button" text="Copy Selected" textFill="#cef2fb" />
-                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Copy All" textFill="#cef2fb" />
+                                          <Button fx:id="cbxTestScopeCopyFromSelected" mnemonicParsing="false" onAction="#onTCCopySelectedAction" styleClass="Button" text="Copy Selected" textFill="#cef2fb" />
+                                          <Button fx:id="cbxTestScopeCopyAll" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onTCCopyAllAction" styleClass="Button" text="Copy All" textFill="#cef2fb" />
+                                          <Label prefHeight="27.0" prefWidth="40.0" text="for =&gt;">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="2.0" />
+                                             </padding>
+                                          </Label>
                                           <HBox id="lightpanel">
                                              <children>
-                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeICJira" mnemonicParsing="false" onAction="#onChangeJiraModeThenSwitchAllMarkdown" selected="true" text="ICJira">
+                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeICJira" mnemonicParsing="false" selected="true" text="ICJira">
                                                    <toggleGroup>
                                                       <ToggleGroup fx:id="JiraSwitchMode" />
                                                    </toggleGroup>
                                                 </ToggleButton>
-                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeFXTJira" mnemonicParsing="false" onAction="#onChangeJiraModeThenSwitchAllMarkdown" text="FXTJIra" toggleGroup="$JiraSwitchMode" />
+                                                <ToggleButton id="ToggleButton" fx:id="togglebtnTestingScopeFXTJira" mnemonicParsing="false" text="FXTJIra" toggleGroup="$JiraSwitchMode" />
                                              </children>
                                           </HBox>
                                        </children>

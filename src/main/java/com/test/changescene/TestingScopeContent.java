@@ -73,7 +73,7 @@ public class TestingScopeContent {
         HashMap<Integer, CheckBox> checkboxList = new HashMap<>();
         int index = 0;
         for (VBox vb : tcVboxes.values()) {
-            hb = (HBox) vb.getChildren().get(0);
+            hb = (HBox) vb.getChildren().get(1);
             checkboxList.put(index, (CheckBox) hb.getChildren().get(1));
             index++;
         }
