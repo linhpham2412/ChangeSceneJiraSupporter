@@ -1,8 +1,6 @@
 #! **Functional**
-[ ]* Verify that user can CRUD configuration **Sectors** in system DB
-[ ]* Verify that when user can see list of Sectors defined in configuration will display correctly in Advice your Client - Investment Preferences page
-[ ]* Verify that when user can see list of Sectors defined in configuration will display correctly in Attribute restriction page
-[ ]* abc
+[ ]* Function 1
+[ ]* Function 2
 <EndSection>
 #! **Performance Sanity Test**
 [ ]* Verify all pages should open within 1.5 seconds
@@ -19,7 +17,7 @@
 [ ]* Story should be test with Chrome latest version
 <EndSection>
 #! **UI/UX Testing**
-[ ]* Responsive testing on 1280x800 and 1024x768
+[ ]* Responsive testing on 1920x1080 (minimum)
 <EndSection>
 #! **Translation Test**
 [ ]* Verify all Frontend labels and form labels are display as key when change to other languages

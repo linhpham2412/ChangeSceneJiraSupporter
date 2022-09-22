@@ -145,7 +145,7 @@
                                              </HBox.margin>
                                           </Label>
                                           <Separator layoutX="129.0" layoutY="10.0" prefWidth="83.0" visible="false" />
-                                          <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="150.0" styleClass="Button" stylesheets="@changeSceneStyleSheet.css" text="Copy Expected" onAction="#generateAndCopyICExpectedDescription">
+                                          <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="150.0" styleClass="Button" stylesheets="@changeSceneStyleSheet.css" text="Copy Expected" disable="true">
                                              <HBox.margin>
                                                 <Insets bottom="6.0" />
                                              </HBox.margin>
@@ -161,7 +161,7 @@
                                              </HBox.margin>
                                           </Label>
                                           <Separator layoutX="127.0" layoutY="10.0" prefWidth="120.0" visible="false" />
-                                          <Button mnemonicParsing="false" prefWidth="150.0" styleClass="Button" text="Copy Actual" onAction="#generateAndCopyICActualDescription">
+                                          <Button mnemonicParsing="false" prefWidth="150.0" styleClass="Button" text="Copy Actual" disable="true">
                                              <HBox.margin>
                                                 <Insets bottom="6.0" />
                                              </HBox.margin>

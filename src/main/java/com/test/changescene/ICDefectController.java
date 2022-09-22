@@ -158,24 +158,28 @@ public class ICDefectController implements Initializable {
         fourEyeCommentContent.append(supporterUtilICDefect.pickSelectedCheckBoxesAndPrint(cbxICDefectTestingLanguageList, "Testing Language", "`", "**"));
         fourEyeCommentContent.append("\n").append("`Steps to reproduce:` ").append("\n");
         fourEyeCommentContent.append(txaICDefectStepsToReproduce.getText()).append("\n");
-        if (!txaICDefectNote.getText().isEmpty()) fourEyeCommentContent.append(txaICDefectNote.getText()).append("\n");
+        if (!txaICDefectNote.getText().isEmpty()) fourEyeCommentContent.append("\n").append("`Note:` ").append("\n").append(txaICDefectNote.getText()).append("\n");
+        fourEyeCommentContent.append("\n").append("`Expected Result:` ").append("\n");
+        fourEyeCommentContent.append(txaICDefectExpected.getText()).append("\n");
+        fourEyeCommentContent.append("\n").append("`Actual Result:` ").append("\n");
+        fourEyeCommentContent.append(txaICDefectActual.getText()).append("\n");
         content.putString(String.valueOf(fourEyeCommentContent));
         clipboard.setContent(content);
     }
 
-    @FXML
-    void generateAndCopyICExpectedDescription() {
-        String fourEyeCommentContent = txaICDefectExpected.getText() + "\n";
-        content.putString(String.valueOf(fourEyeCommentContent));
-        clipboard.setContent(content);
-    }
-
-    @FXML
-    void generateAndCopyICActualDescription() {
-        String fourEyeCommentContent = txaICDefectActual.getText() + "\n";
-        content.putString(String.valueOf(fourEyeCommentContent));
-        clipboard.setContent(content);
-    }
+//    @FXML
+//    void generateAndCopyICExpectedDescription() {
+//        String fourEyeCommentContent = txaICDefectExpected.getText() + "\n";
+//        content.putString(String.valueOf(fourEyeCommentContent));
+//        clipboard.setContent(content);
+//    }
+//
+//    @FXML
+//    void generateAndCopyICActualDescription() {
+//        String fourEyeCommentContent = txaICDefectActual.getText() + "\n";
+//        content.putString(String.valueOf(fourEyeCommentContent));
+//        clipboard.setContent(content);
+//    }
 
     public void onHandleICDefectGivenClick(ActionEvent actionEvent) {
         supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "Given");
