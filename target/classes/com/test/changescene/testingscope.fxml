@@ -114,7 +114,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Separator>
-                                          <Button layoutX="478.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb">
+                                          <Button layoutX="478.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb" onAction="#onTestScopeAddNewItemAction">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -132,7 +132,7 @@
                                     <HBox spacing="10.0">
                                        <children>
                                           <Button fx:id="btnTestScopeLoadTemplate" mnemonicParsing="false" onAction="#loadTestScopeTemplate" prefWidth="130.0" styleClass="Button" text="Load Template" textFill="#cef2fb" />
-                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="125.0" styleClass="Button" text="Save Template" textFill="#cef2fb" />
+                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="125.0" styleClass="Button" text="Save Template" textFill="#cef2fb" onAction="#saveTestScopeTemplate"/>
                                           <Button fx:id="btnAddNewHeaderTestingScope" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#addNewHeaderTestingScope" prefWidth="140.0" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
                                        </children>
                                        <VBox.margin>

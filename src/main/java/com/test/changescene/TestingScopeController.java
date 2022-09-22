@@ -93,31 +93,23 @@ public class TestingScopeController implements Initializable {
     }
 
     public void onHandleTestingScopeAndClick(ActionEvent actionEvent) {
-        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, false, "  And");
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, false, "And");
     }
 
     public void onHandleTestingScopeBoldClick(ActionEvent actionEvent) {
 //        if (togglebtnTestingScopeICJira.isSelected()) {
 //            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "**", "*");
 //        } else {
-            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "*", null);
+        supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "*", null);
 //        }
     }
 
     public void onHandleTestingScopeItalicClick(ActionEvent actionEvent) {
-//        if (togglebtnTestingScopeICJira.isSelected()) {
-//            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "*", null);
-//        } else {
-            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "_", null);
-//        }
+        supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "_", null);
     }
 
     public void onHandleTestingScopeHighlightClick(ActionEvent actionEvent) {
-//        if (togglebtnTestingScopeICJira.isSelected()) {
-//            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "`", null);
-//        } else {
-            supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "+", null);
-//        }
+        supporterUtilTestingScope.markdownTextInTextArea(txaTestingScope, "+", null);
     }
 
     public void onHandleTestingScopeNumericClick(ActionEvent actionEvent) {
@@ -127,10 +119,6 @@ public class TestingScopeController implements Initializable {
     public void onHandleTestingScopeListClick(ActionEvent actionEvent) {
         supporterUtilTestingScope.onChangeMultipleLinesToList(txaTestingScope, listModeTestingScope);
     }
-
-//    public void onChangeJiraModeThenSwitchAllMarkdown(ActionEvent actionEvent) {
-//        supporterUtilTestingScope.onChangeJiraModeThenSwitchAllMarkdown(txaTestingScope,togglebtnTestingScopeICJira.isSelected());
-//    }
 
     @FXML
     void loadTestScopeTemplate() throws IOException {
@@ -169,20 +157,52 @@ public class TestingScopeController implements Initializable {
         }
     }
 
+    @FXML
+    void saveTestScopeTemplate() {
+        StringBuilder sb1 = getDataFromTextAreaToArray(false, true, false);
+
+        fileChooser.setInitialDirectory(new File(currentPath));
+        fileChooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+        File savedFile = fileChooser.showSaveDialog(null);
+
+        try {
+            if (!(templateFile == null)) {
+                if (savedFile.getName().equals(templateFile.getName())) {
+                    FileWriter fstream = new FileWriter(templateFile.getName());
+                    BufferedWriter bw = new BufferedWriter(fstream);
+                    bw.write(String.valueOf(sb1));
+                    bw.close();
+                } else {
+                    FileWriter fstream = new FileWriter(savedFile.getName());
+                    BufferedWriter bw = new BufferedWriter(fstream);
+                    bw.write(String.valueOf(sb1));
+                    bw.close();
+                }
+            } else {
+                FileWriter fstream = new FileWriter(savedFile.getName());
+                BufferedWriter bw = new BufferedWriter(fstream);
+                bw.write(String.valueOf(sb1));
+                bw.close();
+            }
+        } catch (IOException e) {
+        }
+    }
+
     public void onTCCopySelectedAction(ActionEvent actionEvent) {
-        StringBuilder sb1 = getDataFromTextAreaToArray(true);
+        StringBuilder sb1 = getDataFromTextAreaToArray(true, false, true);
         content.putString(String.valueOf(sb1));
         clipboard.setContent(content);
     }
 
     public void onTCCopyAllAction(ActionEvent actionEvent) {
-        StringBuilder sb1 = getDataFromTextAreaToArray(false);
+        StringBuilder sb1 = getDataFromTextAreaToArray(false, false, true);
         content.putString(String.valueOf(sb1));
         clipboard.setContent(content);
     }
 
-    private StringBuilder getDataFromTextAreaToArray(boolean isGetFromSelectedCheckBoxes) {
+    private StringBuilder getDataFromTextAreaToArray(boolean isGetFromSelectedCheckBoxes, boolean ignoreMarkDownSwitchToICJira, boolean isExportToCopyFunction) {
         StringBuilder sb = new StringBuilder();
+        String tempTextChange = "";
         HashMap<Integer, CheckBox> availableCheckboxes = testingScope.getCheckBoxList();
         if (!testingScope.getMaxItemNumber().equals(0)) {
             try {
@@ -198,28 +218,32 @@ public class TestingScopeController implements Initializable {
             if (isGetFromSelectedCheckBoxes) {
                 for (int i = 0; i < testingScope.getMaxItemNumber(); i++) {
                     if (availableCheckboxes.get(i).isSelected()) {
-//                        if (togglebtnTestingScopeICJira.isSelected()) {
-//                            sb.append(testingScope.getICHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
-//                        } else {
-                            sb.append(testingScope.getHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
-//                        }
+                        sb.append(testingScope.getHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i)).append("<EndSection>").append("\n");
                     }
                 }
             } else {
                 for (int i = 0; i < testingScope.getMaxItemNumber(); i++) {
-//                    if (togglebtnTestingScopeICJira.isSelected()) {
-//                        sb.append(testingScope.getICHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
-//                    } else {
-                        sb.append(testingScope.getHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i));
-//                    }
+                    sb.append(testingScope.getHeaderById(i)).append("\n").append(testingScope.getTestingScopeContentById(i)).append("<EndSection>").append("\n");
                 }
             }
         }
-        if (togglebtnTestingScopeICJira.isSelected()){
-            sb = new StringBuilder(supporterUtilTestingScope.switchMarkDownToICJira(sb.toString()));
-        }else{
-            sb = new StringBuilder(supporterUtilTestingScope.switchMarkDownToFXTJira(sb.toString()));
+        if (!ignoreMarkDownSwitchToICJira) {
+            if (togglebtnTestingScopeICJira.isSelected()) {
+                sb = new StringBuilder(supporterUtilTestingScope.switchMarkDownToICJira(sb.toString()));
+            } else {
+                sb = new StringBuilder(supporterUtilTestingScope.switchMarkDownToFXTJira(sb.toString()));
+            }
+        }
+
+        if (isExportToCopyFunction){
+            tempTextChange = sb.toString();
+            tempTextChange = tempTextChange.replaceAll("<EndSection>\n","");
+            sb = new StringBuilder(tempTextChange);
         }
         return sb;
+    }
+
+    public void onTestScopeAddNewItemAction(ActionEvent actionEvent) {
+        supporterUtilTestingScope.customTextAddMethod(txaTestingScope, null, "[ ]* ");
     }
 }

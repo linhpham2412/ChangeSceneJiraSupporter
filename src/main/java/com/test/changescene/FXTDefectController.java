@@ -179,7 +179,7 @@ public class FXTDefectController implements Initializable {
     }
 
     public void onHandleFXTDefectAndClick(ActionEvent actionEvent) {
-        supporterUtilFXTDefect.customTextAddMethod(txaFXTDefectStepsToReproduce, false, "  And");
+        supporterUtilFXTDefect.customTextAddMethod(txaFXTDefectStepsToReproduce, false, "And");
     }
 
     public void onHandleFXTDefectBoldClick(ActionEvent actionEvent) {
