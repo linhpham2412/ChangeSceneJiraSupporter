@@ -308,7 +308,9 @@ public class supporterUtils {
             else if (keyEvent.getCode() == KeyCode.DIGIT3 && keyEvent.isControlDown())
                 customTextAddMethod(workingTextArea, isICJiraMode, "Then");
             else if (keyEvent.getCode() == KeyCode.DIGIT4 && keyEvent.isControlDown())
-                customTextAddMethod(workingTextArea, isICJiraMode, "  And");
+                customTextAddMethod(workingTextArea, isICJiraMode, "And");
+            else if (keyEvent.getCode() == KeyCode.DIGIT5 && keyEvent.isControlDown())
+                customTextAddMethod(workingTextArea, null, "[ ]* ");
             else if (keyEvent.getCode() == KeyCode.B && keyEvent.isControlDown()) {
                 if (isICJiraMode) markdownTextInTextArea(workingTextArea, "**", "*");
                 else markdownTextInTextArea(workingTextArea, "*", null);
