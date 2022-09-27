@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.TestingScopeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.changescene.TestingScopeController">
    <children>
       <TilePane prefHeight="800.0" prefWidth="1280.0" stylesheets="@changeSceneStyleSheet.css">
          <children>
@@ -114,7 +114,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Separator>
-                                          <Button layoutX="478.0" layoutY="10.0" mnemonicParsing="false" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb" onAction="#onTestScopeAddNewItemAction">
+                                          <Button layoutX="478.0" layoutY="10.0" mnemonicParsing="false" onAction="#onTestScopeAddNewItemAction" styleClass="Button" text="Add New Item[5]" textFill="#cef2fb">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
@@ -132,7 +132,7 @@
                                     <HBox spacing="10.0">
                                        <children>
                                           <Button fx:id="btnTestScopeLoadTemplate" mnemonicParsing="false" onAction="#loadTestScopeTemplate" prefWidth="130.0" styleClass="Button" text="Load Template" textFill="#cef2fb" />
-                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="125.0" styleClass="Button" text="Save Template" textFill="#cef2fb" onAction="#saveTestScopeTemplate"/>
+                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveTestScopeTemplate" prefWidth="125.0" styleClass="Button" text="Save Template" textFill="#cef2fb" />
                                           <Button fx:id="btnAddNewHeaderTestingScope" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#addNewHeaderTestingScope" prefWidth="140.0" styleClass="Button" text="Add New Header" textFill="#cef2fb" />
                                        </children>
                                        <VBox.margin>
