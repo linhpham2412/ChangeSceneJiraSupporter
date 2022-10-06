@@ -182,27 +182,27 @@ public class ICDefectController implements Initializable {
 //    }
 
     public void onHandleICDefectGivenClick(ActionEvent actionEvent) {
-        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "Given");
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, true, "Given");
     }
 
     public void onHandleICDefectWhenClick(ActionEvent actionEvent) {
-        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "When");
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, true, "When");
     }
 
     public void onHandleICDefectThenClick(ActionEvent actionEvent) {
-        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "Then");
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, true, "Then");
     }
 
     public void onHandleICDefectAndClick(ActionEvent actionEvent) {
-        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, false, "  And");
+        supporterUtilICDefect.customTextAddMethod(txaICDefectStepsToReproduce, true, "And");
     }
 
     public void onHandleICDefectBoldClick(ActionEvent actionEvent) {
-        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce,"*",null);
+        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce, "**", "*");
     }
 
     public void onHandleICDefectItalicClick(ActionEvent actionEvent) {
-        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce,"_",null);
+        supporterUtilICDefect.markdownTextInTextArea(txaICDefectStepsToReproduce, "*", "**");
     }
 
     public void onHandleICDefectHighlightClick(ActionEvent actionEvent) {
